@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宗盛运营2</title>
+</head>
+<!--应该避免使用下面这些标签和属性：
+    标签                 	      描述
+<center>	                  定义居中的内容。
+<font> 和 <basefont> 	      定义 HTML 字体。
+<s> 和 <strike>	              定义删除线文本
+<u>	                          定义下划线文本
+     属性	                      描述
+align	                      定义文本的对齐方式
+bgcolor	                      定义背景颜色
+color	                      定义文本颜色
+对于以上这些标签和属性：请使用样式代替！-->
+
+<body style="background-color: lightgray">
+<h2 style="background-color: red;font-family: Verdana;text-align: center">这是一个head</h2>
+<p style="background-color: green;font-size: 20px;">这是一个段落</p>
+
+
+<!--HTML 可定义很多供格式化输出的元素，比如粗体和斜体字。
+下面有很多例子-->
+<!--文本格式化（演示如何在一个 HTML 文件中对文本进行格式化）-->
+<b>This text is bold (b定义粗体文本)</b>
+
+<br />
+
+<strong>This text is strong  (strong定义加重语气)</strong>
+
+<br />
+
+<big>This text is big  (big	定义大号字)</big>
+
+<br />
+
+<em>This text is emphasized (em	定义着重文字)</em>
+
+<br />
+
+<i>This text is italic (i定义斜体字)</i>
+
+<br />
+
+<small>This text is small (small定义小号字)</small>
+
+<br />
+
+This text contains
+<sub>subscript (sub 定义下标字)</sub>
+
+<br />
+
+This text contains
+<sup>superscript (sup 定义上标字)</sup>
+
+
+<!--预格式文本（演示如何使用 pre 标签对空行和空格进行控制。）-->
+<pre>
+这是
+预格式文本。
+它保留了      空格
+和换行。
+</pre>
+<p>pre 标签很适合显示计算机代码：</p>
+<pre>
+for i = 1 to 10
+     print i
+next i
+</pre>
+
+
+
+<!--"计算机输出"标签的显示不同效果（演示不同的“计算机输出”标签的显示效果。）-->
+<code>Computer code</code>
+<br />
+<kbd>Keyboard input</kbd>
+<br />
+<tt>Teletype text</tt>
+<br />
+<samp>Sample text</samp>
+<br />
+<var>Computer variable</var>
+<br />
+
+<p>
+    <b>注释：</b>这些标签常用于显示计算机/编程代码。
+</p>
+
+
+
+<!--地址（如何在 HTML 文件中写地址。）HTML <address> 元素定义文档或文章的联系信息（作者/拥有者）。
+此元素通常以斜体显示。大多数浏览器会在此元素前后添加折行。-->
+<address>
+    Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA（adress 定义地址）
+</address>
+
+
+<br />
+<!--缩写和首字母缩写（演示如何实现缩写或首字母缩写）-->
+<abbr title="etcetera">etc.（abbr 定义缩写）</abbr>
+<br />
+<acronym title="World Wide Web">WWW（acronym定义首字母缩写）</acronym>
+
+<p>在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+
+<p>仅对于 IE 5 中的 acronym 元素有效。</p>
+
+<p>对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。</p>
+
+
+
+<!--文字方向(演示如何改变文字的方向)-->
+<p>
+    如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (rtl)；
+</p>
+
+<bdo dir="rtl">
+    Here is some Hebrew text（bdo 定义文字方向）
+</bdo>
+
+
+
+
+<!--块引用（演示如何实现长短不一的引用语）-->
+<br>
+这是长的引用：
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+    这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。（blockquote定义长的引用）(cite 定义引用、引证。)
+</blockquote>
+
+这是短的引用：
+<q>
+    这是短的引用。（定义短的引用语）
+</q>
+
+<p>
+    使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+</p>
+
+
+
+
+
+<br>
+<!--删除字效果和插入字效果(演示如何标记删除文本和插入文本)-->
+<p>一打有 <del>二十（del定义删除字）</del> <ins>十二（ins定义插入字）</ins> 件。</p>
+
+<p>大多数浏览器会改写为删除文本和下划线文本。</p>
+
+<p>一些老式的浏览器会把删除文本和下划线文本显示为普通文本。</p>
+
+
+
+<br>
+<p>The <dfn title="World Health Organization">WHO（dfn 定义一个定义项目）</dfn> was founded in 1948.</p>
+
+<p>对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。</p>
+
+
+
+<br>
+<p><abbr title="World Health Organization">WHO</abbr> 成立于 1948 年。</p>
+
+<p>对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。</p>
+
+
+
+<!--如果 <dfn> 元素包含具有标题的 <abbr> 元素，则 title 定义项目：-->
+<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> 成立于 1948 年。</p>
+
+
+
+<!--<cite> 元素定义著作的标题。
+浏览器通常会以斜体显示 <cite> 元素。-->
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+
+
+<!--<bdo> 元素定义双流向覆盖（bi-directional override）。
+<bdo> 元素用于覆盖当前文本方向：   如果您的浏览器支持 bdo，则文本将从左向左进行书写 (rtl)：-->
+<bdo dir="rtl">This text will be written from right to left</bdo>
+
+
+<!--HTML 引文、引用和定义元素
+  标签                    	描述
+<abbr>	              定义缩写或首字母缩略语。
+<address>          	  定义文档作者或拥有者的联系信息。
+<bdo>	              定义文本方向。
+<blockquote>	      定义从其他来源引用的节。
+<dfn>	              定义项目或缩略词的定义。
+<q>	                  定义短的行内引用。
+<cite>	              定义著作的标题。-->
+
+
+
+
+</body>
+</html>
