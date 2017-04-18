@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS外部样式</title>
+    <!--内部样式表-->
+    <!--相当于宏定义.通过 <style> 标签定义内部样式表-->
+    <style type="text/css">
+        h1 {color: red}
+        p {color: blue}
+    </style>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="Content-Language" content="zh-cn" />
+
+<!--外部样式表-->
+    <link rel="stylesheet" type="text/css" href="CSS样式.css" >
+
+
+</head>
+</head>
+<body>
+
+
+<!--显示在宏定义head里面设置的格式-->
+<h1>header 1</h1>
+<p>A paragraph.</p>
+
+
+
+
+<a href="https://www.baidu.com" style="text-decoration:none">
+    这是一个链接！
+</a>
+
+
+
+<h2>我通过外部样式表进行格式化。</h2>
+<h3>这是一个三级标题通过外部样式设置</h3>
+<p>我也一样！</p>
+
+
+
+<!--内联样式
+当特殊的样式需要应用到个别元素时，就可以使用内联样式。 使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何 CSS 属性。以下实例显示出如何改变段落的颜色和左外边距。-->
+<p style="color: red; margin-left: 20px">
+    This is a paragraph
+</p>
+
+
+
+<!--标签	 描述
+<style>	定义样式定义。
+<link>	定义资源引用。
+<div>	定义文档中的节或区域（块级）。
+<span>	定义文档中的行内的小块或区域。
+<font>	规定文本的字体、字体尺寸、字体颜色。不赞成使用。请使用样式。
+<basefont>	定义基准字体。不赞成使用。请使用样式。
+<center>	对文本进行水平居中。不赞成使用。请使用样式。-->
+
+
+
+
+
+
+
+</body>
+</html>
