@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML输入类型</title>
+</head>
+<body>
+<!--输入类型。本章描述 <input> 元素的输入类型。-->
+
+<!--输入类型：text
+<input type="text"> 定义供文本输入的单行输入字段：
+-->
+<form action="action_page.php">
+    First name:<br>
+    <input type="text" name="firstname">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+    <br><br>
+    <input type="submit">
+</form>
+<p>Note that the form itself is not visible.</p>
+<p>Also note that the default width of a text field is 20 characters.</p>
+
+
+
+
+
+
+
+<!--输入类型：password
+<input type="password"> 定义密码字段：
+实例:-->
+<form action="">
+    User name:<br>
+    <input type="text" name="username">
+    <br>
+    User password:<br>
+    <input type="password" name="psw">
+</form>
+<p>The characters in a password field are masked (shown as asterisks or circles).</p>
+<!--注释：password 字段中的字符会被做掩码处理（显示为星号或实心圆）。-->
+
+
+
+
+
+
+
+<!--输入类型：submit
+<input type="submit"> 定义提交表单数据至表单处理程序的按钮。
+表单处理程序（form-handler）通常是包含处理输入数据的脚本的服务器页面。
+在表单的 action 属性中规定表单处理程序（form-handler）：-->
+<form action="action_page.php">
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<p>If you click "Submit", the form-data will be sent to a page called "action_page.php".</p>
+
+<!--如果您省略了提交按钮的 value 属性，那么该按钮将获得默认文本：-->
+<form action="action_page.php">
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit">
+</form>
+<br><br><br><br>
+
+
+
+
+
+
+<!--Input Type: radio
+<input type="radio"> 定义单选按钮。
+-->
+<form action="action_page.php">
+    <input type="radio" name="sex" value="male" checked>Male
+    <br>
+    <input type="radio" name="sex" value="female">Female
+    <br><br>
+    <input type="submit">
+</form>
+
+
+
+
+
+
+
+<!--Input Type: checkbox
+<input type="checkbox"> 定义复选框。-->
+<form action="action_page.php">
+    <input type="checkbox" name="vehicle" value="Bike">I have a bike
+    <br>
+    <input type="checkbox" name="vehicle" value="Car">I have a Car
+    <br><br>
+    <input type="submit">
+</form>
+
+
+
+
+
+
+<!--Input Type: button
+<input type="button> 定义按钮。-->
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+<br><br><br>
+
+
+
+
+<!--
+HTML5 输入类型
+HTML5 增加了多个新的输入类型：
+color
+date
+datetime
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+注释：老式 web 浏览器不支持的输入类型，会被视为输入类型 text。
+-->
+
+<!--输入类型：number
+<input type="number"> 用于应该包含数字值的输入字段。
+您能够对数字做出限制。
+根据浏览器支持，限制可应用到输入字段。-->
+<form action="action_page.php">
+    Quantity (between 1 and 5):
+    <input type="number" name="quantity" min="1" max="5">
+    <input type="submit">
+</form>
+<p><b>Note:</b> type="number" is not supported in IE9 and earlier.</p>
+
+<!--输入限制
+这里列出了一些常用的输入限制（其中一些是 HTML5 中新增的）：
+属性	        描述
+disabled	规定输入字段应该被禁用。
+max	规定输入字段的最大值。
+maxlength	规定输入字段的最大字符数。
+min	规定输入字段的最小值。
+pattern	规定通过其检查输入值的正则表达式。
+readonly	规定输入字段为只读（无法修改）。
+required	规定输入字段是必需的（必需填写）。
+size	规定输入字段的宽度（以字符计）。
+step	规定输入字段的合法数字间隔。
+value	规定输入字段的默认值。
+-->
+
+
+
+
+
+
+<p>Depending on browser support:<br>
+    Fixed steps will apply in the input field.
+</p>
+<form action="action)_page.php">
+    Quantity:
+    <input type="number" name="points" min="0" max="100" step="10" value="30">
+    <input type="submit">
+</form>
+<p><b>Note:</b>type="number" is not supported in IE9 and earlier.</p>
+
+
+
+
+
+
+<!--输入类型：date
+<input type="date"> 用于应该包含日期的输入字段。
+根据浏览器支持，日期选择器会出现输入字段中。-->
+<p>Depending on browser support:<br>
+    A date picker can pop-up when you enter the input field.
+</p>
+<form action="action_page.php">
+    Birthday:
+    <input type="date" name="bday">
+    <input type="submit">
+</form>
+<p><b>Note:</b> type="date" is not supported in Internet Explorer.</p>
+<!--谷歌浏览器能够显示-->
+
+
+<!--您可以向输入添加限制：-->
+<form action="action_page.php">
+    Enter a date before 1980-01-01:<br>
+    <input type="date" name="bday" max="1979-12-31"><br><br>
+    Enter a date after 2000-01-01:<br>
+    <input type="date" name="bday" min="2000-01-02"><br><br>
+    <input type="submit">
+</form>
+<p><strong>Note:</strong>
+    type="date" is not support in Internet Explorer.
+</p>
+
+
+
+
+
+
+
+<!--输入类型：color
+<input type="color"> 用于应该包含颜色的输入字段。
+根据浏览器支持，颜色选择器会出现输入字段中。-->
+<p>
+    Depending on browser support:<br>
+    A color picker can pop-up when you enter the input field.
+</p>
+<form action="action_page.php">
+    Select your favorite color:
+    <input type="color" name="favcolor" value="#ff0000">
+    <input type="submit">
+</form>
+<p><b>Note:</b> type="color" is not supported in Internet Explorer.</p>
+<!--使用谷歌浏览器打开能够显示-->
+
+
+
+
+
+
+<!--输入类型：range
+<input type="range"> 用于应该包含一定范围内的值的输入字段。
+根据浏览器支持，输入字段能够显示为滑块控件。-->
+<p>Depending on browser support:<br>
+    The input tyoe "rang" can be displayer as a slider control.
+</p>
+<form action="action_page.php" method="get">
+    Point:
+    <input type="range" name="points" min="0"  max="10">
+    <input type="submit">
+</form>
+<p><b>Note:</b>type="range" is not support in Internet Explorer 9 and earlier versions.</p>
+<!--您能够使用如下属性来规定限制：min、max、step、value。-->
+
+
+
+
+
+
+<!--输入类型：month
+<input type="month"> 允许用户选择月份和年份。
+根据浏览器支持，日期选择器会出现输入字段中。-->
+<p>Depending on browser support:<br>
+    A date picker can pop-up when you enter the input field.
+</p>
+<form action="action_page.php">
+    Birthday (month and year):
+    <input type="month" name="bdaymonth">
+    <input type="submit">
+</form>
+<p><b>Note:</b>type="month" is not support in Internet Explorer.
+</p>
+<!--用谷歌浏览器能够显示出来-->
+
+
+
+
+
+
+<!--输入类型：week
+<input type="week"> 允许用户选择周和年。
+根据浏览器支持，日期选择器会出现输入字段中。-->
+<p>
+    Depending on browser support:<br>
+    A date picker can pop-up when you enter the input field.
+</p>
+<form action="action_page.php">
+    Select a week:
+    <input type="week" name="year_week">
+    <input type="submit">
+</form>
+<p><b>Note:</b>type="week" is not support in Intenet Explorer.</p>
+<!--在谷歌浏览器里面查看具体详情-->
+
+
+
+
+
+<!--输入类型：time
+<input type="time"> 允许用户选择时间（无时区）。
+根据浏览器支持，时间选择器会出现输入字段中。
+-->
+<p>
+    Depending on browser support:<br>
+    A time picker might pop-up when you enter the input field.
+</p>
+<form action="action_pavge.php">
+    Select a time:
+    <input type="time" name="user_time">
+    <input type="submit">
+</form>
+<p><b>Note:</b>type="time" is not support in Firefox or Internet Explorer.</p>
+<!--谷歌浏览器能够显示出来-->
+
+
+
+
+
+
+<!--
+输入类型：datetime
+<input type="datetime"> 允许用户选择日期和时间（有时区）。
+根据浏览器支持，日期选择器会出现输入字段中。
+-->
+<p>
+    Depending on browser support:<br>
+    A date picker can pop-up when you enter the input field.
+</p>
+<form action="action_page.php">
+    Birthday (date and time):
+    <input type="datatime" name="bdaytime">
+    <input type="submit">
+</form>
+<p><b>Note:</b> type="datetime" is not supported in Chrome,Firefox,or Internet Explorer.</p>
+
+
+
+
+
+
+
+<!--
+输入类型：datetime-local
+<input type="datetime-local"> 允许用户选择日期和时间（无时区）。
+根据浏览器支持，日期选择器会出现输入字段中。
+-->
+<p>
+    Depending on browser support:<br>
+    A date picker can pop-up when you enter the input field.
+</p>
+<form action="action_page.php">
+    Birthday (date and time):
+    <input type="datetime-local" name="bdaytime">
+    <input type="submit" value="Send">
+</form>
+<p><b>Note:</b>type="datetime-local" is not support in Firefox and Internet Explorer.</p>
+<!--谷歌浏览器能够打开-->
+
+
+
+
+
+
+<!--
+输入类型：email
+<input type="email"> 用于应该包含电子邮件地址的输入字段。
+根据浏览器支持，能够在被提交时自动对电子邮件地址进行验证。
+某些智能手机会识别 email 类型，并在键盘增加 ".com" 以匹配电子邮件输入。
+-->
+<form action="action_page.php">
+    E-mail:
+    <input type="email" name="email">
+    <input type="submit">
+</form>
+<p><b>Note:</b>type="email" is not support in IE9 and earlier.</p>
+
+
+
+
+
+
+
+<!--输入类型：search
+<input type="search"> 用于搜索字段（搜索字段的表现类似常规文本字段）。
+-->
+<form action="action_page.php">
+    Search Google:
+    <input type="search" name="googlesearch">
+    <input type="submit">
+</form>
+<br><br><br>
+
+
+
+
+
+<!--
+输入类型：tel
+<input type="tel"> 用于应该包含电话号码的输入字段。
+目前只有 Safari 8 支持 tel 类型。
+-->
+<form action="action_page.php">
+    Telephone:
+    <input type="tel" name="usrtel">
+    <input type="submit">
+</form>
+<p><b>Note:</b> type="tel" is supported only in Safari 8.</p>
+
+
+
+
+
+
+
+<!--
+输入类型：url
+<input type="url"> 用于应该包含 URL 地址的输入字段。
+根据浏览器支持，在提交时能够自动验证 url 字段。
+某些智能手机识别 url 类型，并向键盘添加 ".com" 以匹配 url 输入。
+-->
+<form action="action_page.php">
+    Add your homepage:
+    <input type="url" name="homepage">
+    <input type="submit">
+</form>
+<p><b>Note:</b>The type="url" is not support in IE9 and earlier versions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+</body>
+</html>
