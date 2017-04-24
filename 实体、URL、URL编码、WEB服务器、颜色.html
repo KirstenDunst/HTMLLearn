@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实体、UR、URL编码、WEB服务器、颜色</title>
+</head>
+<body>
+
+<!--HTML 实体
+在 HTML 中，某些字符是预留的。
+在 HTML 中不能使用小于号（<）和大于号（>），这是因为浏览器会误认为它们是标签。
+如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）。
+字符实体类似这样：
+&entity_name;
+或者
+&#entity_number;
+如需显示小于号，我们必须这样写：&lt; 或 &#60;
+提示：使用实体名而不是数字的好处是，名称易于记忆。不过坏处是，浏览器也许并不支持所有实体名称（对实体数字的支持却很好）。-->
+
+<!--不间断空格（non-breaking space）
+HTML 中的常用字符实体是不间断空格(&nbsp;)。
+浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。
+如需在页面中增加空格的数量，您需要使用 &nbsp; 字符实体。-->
+
+<h2>字符实体</h2>
+<p>&X;</p>
+<p>用实体数字 （比如"#174"）或者实体名称 （比如 "pound"）替代 "X，然后查看结果。</p>
+
+<!--HTML 中有用的字符实体-->
+<!--HTML 4.01 支持 ISO 8859-1 (Latin-1) 字符集。
+ISO-8859-1 的较低部分（从 1 到 127 之间的代码）是最初的 7 比特 ASCII。
+ISO-8859-1 的较高部分（从 160 到 255 之间的代码）全都有实体名称。
+这些符号中的大多数都可以在不进行实体引用的情况下使用，但是实体名称或实体编号为那些不容易通过键盘键入的符号提供了表达的方法。
+注释：实体名称对大小写敏感。
+带有实体名称的 ASCII 实体
+结果	描述	实体名称	实体编号
+"	quotation mark	&quot;	&#34;
+'	apostrophe 	&apos;	&#39;
+&	ampersand	&amp;	&#38;
+<	less-than	&lt;	&#60;
+>	greater-than	&gt;	&#62;
+ISO 8859-1 符号实体
+结果	描述	实体名称	实体编号
+ 	non-breaking space	&nbsp;	&#160;
+¡	inverted exclamation mark	&iexcl;	&#161;
+¢	cent	&cent;	&#162;
+£	pound	&pound;	&#163;
+¤	currency	&curren;	&#164;
+¥	yen	&yen;	&#165;
+¦	broken vertical bar	&brvbar;	&#166;
+§	section	&sect;	&#167;
+¨	spacing diaeresis	&uml;	&#168;
+©	copyright	&copy;	&#169;
+ª	feminine ordinal indicator	&ordf;	&#170;
+«	angle quotation mark (left)	&laquo;	&#171;
+¬	negation	&not;	&#172;
+soft hyphen	&shy;	&#173;
+®	registered trademark	&reg;	&#174;
+¯	spacing macron	&macr;	&#175;
+°	degree	&deg;	&#176;
+±	plus-or-minus 	&plusmn;	&#177;
+²	superscript 2	&sup2;	&#178;
+³	superscript 3	&sup3;	&#179;
+´	spacing acute	&acute;	&#180;
+µ	micro	&micro;	&#181;
+¶	paragraph	&para;	&#182;
+·	middle dot	&middot;	&#183;
+¸	spacing cedilla	&cedil;	&#184;
+¹	superscript 1	&sup1;	&#185;
+º	masculine ordinal indicator	&ordm;	&#186;
+»	angle quotation mark (right)	&raquo;	&#187;
+¼	fraction 1/4	&frac14;	&#188;
+½	fraction 1/2	&frac12;	&#189;
+¾	fraction 3/4	&frac34;	&#190;
+¿	inverted question mark	&iquest;	&#191;
+×	multiplication	&times;	&#215;
+÷	division	&divide;	&#247;
+ISO 8859-1 字符实体
+结果	描述	实体名称	实体编号
+À	capital a, grave accent	&Agrave;	&#192;
+Á	capital a, acute accent	&Aacute;	&#193;
+Â	capital a, circumflex accent	&Acirc;	&#194;
+Ã	capital a, tilde	&Atilde;	&#195;
+Ä	capital a, umlaut mark	&Auml;	&#196;
+Å	capital a, ring	&Aring;	&#197;
+Æ	capital ae	&AElig;	&#198;
+Ç	capital c, cedilla	&Ccedil;	&#199;
+È	capital e, grave accent	&Egrave;	&#200;
+É	capital e, acute accent	&Eacute;	&#201;
+Ê	capital e, circumflex accent	&Ecirc;	&#202;
+Ë	capital e, umlaut mark	&Euml;	&#203;
+Ì	capital i, grave accent	&Igrave;	&#204;
+Í	capital i, acute accent	&Iacute;	&#205;
+Î	capital i, circumflex accent	&Icirc;	&#206;
+Ï	capital i, umlaut mark	&Iuml;	&#207;
+Ð	capital eth, Icelandic	&ETH;	&#208;
+Ñ	capital n, tilde	&Ntilde;	&#209;
+Ò	capital o, grave accent	&Ograve;	&#210;
+Ó	capital o, acute accent	&Oacute;	&#211;
+Ô	capital o, circumflex accent	&Ocirc;	&#212;
+Õ	capital o, tilde	&Otilde;	&#213;
+Ö	capital o, umlaut mark	&Ouml;	&#214;
+Ø	capital o, slash	&Oslash;	&#216;
+Ù	capital u, grave accent	&Ugrave;	&#217;
+Ú	capital u, acute accent	&Uacute;	&#218;
+Û	capital u, circumflex accent	&Ucirc;	&#219;
+Ü	capital u, umlaut mark	&Uuml;	&#220;
+Ý	capital y, acute accent	&Yacute;	&#221;
+Þ	capital THORN, Icelandic	&THORN;	&#222;
+ß	small sharp s, German	&szlig;	&#223;
+à	small a, grave accent	&agrave;	&#224;
+á	small a, acute accent	&aacute;	&#225;
+â	small a, circumflex accent	&acirc;	&#226;
+ã	small a, tilde	&atilde;	&#227;
+ä	small a, umlaut mark	&auml;	&#228;
+å	small a, ring	&aring;	&#229;
+æ	small ae	&aelig;	&#230;
+ç	small c, cedilla	&ccedil;	&#231;
+è	small e, grave accent	&egrave;	&#232;
+é	small e, acute accent	&eacute;	&#233;
+ê	small e, circumflex accent	&ecirc;	&#234;
+ë	small e, umlaut mark	&euml;	&#235;
+ì	small i, grave accent	&igrave;	&#236;
+í	small i, acute accent	&iacute;	&#237;
+î	small i, circumflex accent	&icirc;	&#238;
+ï	small i, umlaut mark	&iuml;	&#239;
+ð	small eth, Icelandic	&eth;	&#240;
+ñ	small n, tilde	&ntilde;	&#241;
+ò	small o, grave accent	&ograve;	&#242;
+ó	small o, acute accent	&oacute;	&#243;
+ô	small o, circumflex accent	&ocirc;	&#244;
+õ	small o, tilde	&otilde;	&#245;
+ö	small o, umlaut mark	&ouml;	&#246;
+ø	small o, slash	&oslash;	&#248;
+ù	small u, grave accent	&ugrave;	&#249;
+ú	small u, acute accent	&uacute;	&#250;
+û	small u, circumflex accent	&ucirc;	&#251;
+ü	small u, umlaut mark	&uuml;	&#252;
+ý	small y, acute accent	&yacute;	&#253;
+þ	small thorn, Icelandic	&thorn;	&#254;
+ÿ	small y, umlaut mark	&yuml;	&#255;
+-->
+
+
+
+
+
+<!-------------------------------------------------------------URL---------------------------------------------->
+
+
+
+<!--当您点击 HTML 页面中的某个链接时，对应的 <a> 标签指向万维网上的一个地址。
+统一资源定位器（URL）用于定位万维网上的文档（或其他数据）。
+网址，比如 http://www.w3school.com.cn/html/index.asp，遵守以下的语法规则：
+scheme://host.domain:port/path/filename
+解释：
+scheme - 定义因特网服务的类型。最常见的类型是 http
+host - 定义域主机（http 的默认主机是 www）
+domain - 定义因特网域名，比如 w3school.com.cn
+:port - 定义主机上的端口号（http 的默认端口号是 80）
+path - 定义服务器上的路径（如果省略，则文档必须位于网站的根目录中）。
+filename - 定义文档/资源的名称
+编者注：URL 的英文全称是 Uniform Resource Locator，中文也译为“统一资源定位符”。
+URL Schemes
+以下是其中一些最流行的 scheme：
+Scheme	访问                      	用于...
+http	超文本传输协议	        以 http:// 开头的普通网页。不加密。
+https	安全超文本传输协议	         安全网页。加密所有信息交换。
+ftp	    文件传输协议	             用于将文件下载或上传至网站。
+file	 	                        您计算机上的文件。
+-->
+
+
+
+
+
+
+<!-------------------------------------------------------------URL编码---------------------------------------------->
+<!--URL 编码
+URL 只能使用 ASCII 字符集来通过因特网进行发送。
+由于 URL 常常会包含 ASCII 集合之外的字符，URL 必须转换为有效的 ASCII 格式。
+URL 编码使用 "%" 其后跟随两位的十六进制数来替换非 ASCII 字符。
+URL 不能包含空格。URL 编码通常使用 + 来替换空格。-->
+<!--URL 编码示例
+字符 	URL 编码
+€	      %80
+£	      %A3
+©	      %A9
+®	      %AE
+À	      %C0
+Á	      %C1
+Â	      %C2
+Ã	      %C3
+Ä	      %C4
+Å	      %C5
+
+url编码参考手册http://www.w3school.com.cn/tags/html_ref_urlencode.html
+-->
+
+
+
+
+
+
+<!------------------------------------------------------------HTML颜色----------------------------------------------->
+<!--颜色值
+颜色由一个十六进制符号来定义，这个符号由红色、绿色和蓝色的值组成（RGB）。
+每种颜色的最小值是0（十六进制：#00）。最大值是255（十六进制：#FF）。
+这个表格给出了由三种颜色混合而成的具体效果：-->
+
+<!--本页提供了被大多数浏览器支持的颜色名。
+提示：仅有 16 种颜色名被 W3C 的 HTML 4.0 标准支持，它们是：aqua、black、blue、fuchsia、gray、green、lime、maroon、navy、olive、purple、red、silver、teal、white、yellow。
+如果使用其它颜色的话，就应该使用十六进制的颜色值。-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
