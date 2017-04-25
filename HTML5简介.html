@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">       <!--HTML5 的新的文档类型（DOCTYPE）声明非常简单.HTML5 中默认的字符编码是 UTF-8。-->
+    <title>HTML5简介</title>
+    <!--<script>document.createElement("myHello")</script>-->
+    <!--[if it IE9]>
+    <script src="http://html5shiv.googlecode/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <style>
+      myHero {
+          display:block;
+          background-color: #d4d4d4;
+          padding:50px;
+          font-size: 30px;
+      }
+    </style>
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif; font-size: 0.8em;}
+        }
+        header,nav,section,article,footer {
+            border: 1px solid gray; margin: 5px; padding: 8px;
+        }
+        nav ul li {
+            display: inline; margin: 5px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<video width="320" height="240" controls="controls">
+    <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg">
+    <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
+<!--HTML5 是最新的 HTML 标准。
+HTML5 是专门为承载丰富的 web 内容而设计的，并且无需额外插件。
+HTML5 拥有新的语义、图形以及多媒体元素。
+HTML5 提供的新元素和新的 API 简化了 web 应用程序的搭建。
+HTML5 是跨平台的，被设计为在不同类型的硬件（PC、平板、手机、电视机等等）之上运行。
+-->
+
+
+<!--HTML5 - 新的属性语法
+HTML5 标准允许 4 中不同的属性语法。
+本例演示在 <input> 标签中使用的不同语法：
+类型	                       示例
+Empty	    <input type="text" value="John Doe" disabled>
+Unquoted	<input type="text" value=John Doe>
+Double-quoted	<input type="text" value="John Doe">
+Single-quoted	<input type="text" value='John Doe'>
+在 HTML5 标准中，根据对属性的需求，可能会用到所有 4 种语法。
+-->
+
+
+
+<!--HTML5 - 新特性
+HTML5 的一些最有趣的新特性：
+新的语义元素，比如 <header>, <footer>, <article>, and <section>。
+新的表单控件，比如数字、日期、时间、日历和滑块。
+强大的图像支持（借由 <canvas> 和 <svg>）
+强大的多媒体支持（借由 <video> 和 <audio>）
+强大的新 API，比如用本地存储取代 cookie。
+-->
+
+
+
+<!--HTML5 - 被删元素
+以下 HTML 4.01 元素已从 HTML5 中删除：
+<acronym>
+<applet>
+<basefont>
+<big>
+<center>
+<dir>
+<font>
+<frame>
+<frameset>
+<noframes>
+<strike>
+<tt>
+-->
+
+
+
+
+<!-------------------------------------------------------HTML5浏览器支持------------------------------------------------>
+<!--HTML5 浏览器支持
+所有现代浏览器都支持 HTML5。
+此外，所有浏览器，不论新旧，都会自动把未识别元素当做行内元素来处理。
+正因如此，您可以帮助老式浏览器处理”未知的“ HTML 元素。
+注释：您甚至可以教授石器时代的 IE6 如何处理未知的 HTML 元素。-->
+
+
+
+
+<!--把 HTML5 元素定义为块级元素
+HTML5 定义了八个新的语义 HTML 元素。所有都是块级元素。
+您可以把 CSS display 属性设置为 block，以确保老式浏览器中正确的行为：
+实例:
+header, section, footer, aside, nav, main, article, figure {
+display: block;
+}
+-->
+
+
+
+
+<!--向 HTML 添加新元素
+您可以通过浏览器 trick 向 HTML 添加任何新元素：
+本例向 HTML 添加了一个名为 <myHero> 的新元素，并为其定义 display 样式：
+实例:
+-->
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<myHero>My First Hero</myHero>
+<!--已添加的 JavaScript 语句 document.createElement("myHero")，仅适用于 IE。-->
+<br><br><br><br>
+
+
+
+
+
+
+<!--Internet Explorer 的问题
+上述方案可用于所有新的 HTML5 元素，但是：
+注意：Internet Explorer 8 以及更早的版本，不允许对未知元素添加样式。
+幸运的是，Sjoerd Visscher 创造了 "HTML5 Enabling JavaScript", "the shiv"：
+
+完整的 Shiv 解决方案
+-->
+<h1>My First Article</h1>
+<article>
+    London is the capital city of England.
+    It is the most populous zity in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.
+</article>
+<!--引用 shiv 代码的链接必须位于 <head> 元素中，因为 Internet Explorer 需要在读取之前认识所有新元素。-->
+
+
+
+
+<!--HTML5 Skeleton-->
+<header>
+    <h1>HTML5 Skeleton</h1>
+</header>
+<nav>
+    <url>
+        <li><a href="http://www.w3school.com.cn/html5_semantic_elements.asp">HTML2 Semantic</a></li>
+        <li><a href="http://www.w3school.com.cn/html5_geolocation.asp">HTML5 Geolocation</a></li>
+        <li><a href="http://www.w3school.com.cn/html5_canvas.asp">HTML5 Graphics</a></li>
+    </url>
+</nav>
+<section>
+    <h2>Famous Cities</h2>
+    <article>
+        <h2>London</h2>
+        <p>
+            London is the capital city of England. It is the most populous city in the United Kingdom,
+            With a metropolitan area of over 13 million inhabitants.
+        </p>
+    </article>
+    <article>
+        <h2>Paris</h2>
+        <p>
+            Paris is the capital and most populous city of France.
+        </p>
+    </article>
+    <article>
+        <h2>Tokyo</h2>
+        <p>
+            Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+            and the most populous metropolitan area in the world.
+        </p>
+    </article>
+</section>
+<footer>
+    <p>© 2014 W3Schools. All rights reserved.</p>
+</footer>
+
+
+
+
+<!---------------------------------------------------------HTML新元素-------------------------------------------------->
+
+
+<!--HTML5 中的新元素
+下面列出的 HTML5 的新元素，以及对它们的描述。-->
+
+<!--新的语义/结构元素
+HTML5 提供的新元素可以构建更好的文档结构：
+标签	             描述
+<article>	定义文档内的文章。
+<aside>	    定义页面内容之外的内容。
+<bdi>	    定义与其他文本不同的文本方向。
+<details>	定义用户可查看或隐藏的额外细节。
+<dialog>	定义对话框或窗口。
+<figcaption>	定义 <figure> 元素的标题。
+<figure>	定义自包含内容，比如图示、图表、照片、代码清单等等。
+<footer>	定义文档或节的页脚。
+<header>	定义文档或节的页眉。
+<main>	    定义文档的主内容。
+<mark>	    定义重要或强调的内容。
+<menuitem>	定义用户能够从弹出菜单调用的命令/菜单项目。
+<meter>	    定义已知范围（尺度）内的标量测量。
+<nav>	    定义文档内的导航链接。
+<progress>	定义任务进度。
+<rp>	    定义在不支持 ruby 注释的浏览器中显示什么。
+<rt>	    定义关于字符的解释/发音（用于东亚字体）。
+<ruby>	    定义 ruby 注释（用于东亚字体）。
+<section>	定义文档中的节。
+<summary>	定义 <details> 元素的可见标题。
+<time>	    定义日期/时间。
+<wbr>	    定义可能的折行（line-break）。-->
+
+
+<!--新的表单元素
+标签	             描述
+<datalist>	定义输入控件的预定义选项。
+<keygen>	定义键对生成器字段（用于表单）。
+<output>	定义计算结果。-->
+
+
+<!--新的输入类型
+新的输入类型
+color
+date
+datetime
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+
+新的输入属性
+autocomplete
+autofocus
+form
+formaction
+formenctype
+formmethod
+formnovalidate
+formtarget
+height 和 width
+list
+min 和 max
+multiple
+pattern (regexp)
+placeholder
+required
+step
+-->
+
+
+
+
+<!--HTML5 - 新的属性语法
+HTML5 允许四种不同的属性语法。
+该例演示 <input> 标签中使用的不同语法：
+标签                 	描述
+Empty	        <input type="text" value="John Doe" disabled>
+Unquoted	    <input type="text" value=John>
+Double-quoted	<input type="text" value="John Doe">
+Single-quoted	<input type="text" value='John Doe'>
+在 HTML5 中，根据属性所需，可能会使用所有这四种语法。
+-->
+
+
+
+<!--HTML5 图像
+标签	              描述
+<canvas>	定义使用 JavaScript 的图像绘制。
+<svg>	    定义使用 SVG 的图像绘制。
+-->
+
+
+
+<!--新的媒介元素
+标签	               描述
+<audio>	    定义声音或音乐内容。
+<embed>	    定义外部应用程序的容器（比如插件）。
+<source>	定义 <video> 和 <audio> 的来源。
+<track>	    定义 <video> 和 <audio> 的轨道。
+<video>	    定义视频或影片内容。
+-->
+
+
+
+
+
+</body>
+</html>
