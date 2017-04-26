@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Canvas</title>
+
+    <style type="text/css">
+        body {
+            font-size: 70%;
+            font-family: Verdana,Helvetica,Arial,sans-serif;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function cnvs_getCoordinates(e) {
+            x=e.clientX;
+            y=e.clientY;
+            document.getElementById("xycoordinates").innerHTML="Coordinates:("+ x + ","+ y + ")";
+        }
+        function cnvs_clearCoordinates() {
+            document.getElementById("xycoordinates").innerHTML="";
+        }
+    </script>
+
+</head>
+<body style="margin: 0px;">
+
+<!--canvas元素用于在网页上绘制图形。-->
+
+<!--
+什么是 Canvas？
+HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。
+画布是一个矩形区域，您可以控制其每一像素。
+canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+-->
+
+
+
+<p>把鼠标悬停在下面的矩形上可以看到坐标：</p>
+<div id="coordiv" style="float: left;width: 199px; height:99px; border: 1px solid #c3c3c3" onmousemove="cnvs_getCoordinates(event)"
+     onmouseout="cnvs_clearCoordinates()"></div>
+<br/><br/><br/>
+<div id="xycoordinates"></div>
+
+
+
+
+
+
+<!--
+创建 Canvas 元素
+向 HTML5 页面添加 canvas 元素。
+规定元素的 id、宽度和高度：
+<canvas id="myCanvas" width="200" height="100"></canvas>
+-->
+
+
+
+
+<!--
+通过 JavaScript 来绘制
+
+canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.fillStyle="#FF0000";
+cxt.fillRect(0,0,150,75);
+</script>
+
+JavaScript 使用 id 来寻找 canvas 元素：
+
+var c=document.getElementById("myCanvas");
+
+然后，创建 context 对象：
+
+var cxt=c.getContext("2d");
+
+getContext("2d") 对象是内建的 HTML5 对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+
+下面的两行代码绘制一个红色的矩形：
+
+cxt.fillStyle="#FF0000";
+cxt.fillRect(0,0,150,75);
+
+fillStyle 方法将其染成红色，fillRect 方法规定了形状、位置和尺寸。
+-->
+
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!--
+更多 Canvas 实例
+下面的在 canvas 元素上进行绘画的更多实例：
+实例 - 线条
+通过指定从何处开始，在何处结束，来绘制一条线：
+-->
+<canvas id="myCanvas" width="200" height="100" style="border: 1px solid #c3c3c3;">
+    Your browser does not support the canves element.
+</canvas>
+<script type="text/javascript">
+    var c=document.getElementById("myCanvas");
+    var cxt=c.getContext("2d");
+    cxt.moveTo(10,10);
+    cxt.lineTo(150,50);
+    cxt.lineTo(10,50);
+    cxt.stroke();
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+实例 - 圆形
+通过规定尺寸、颜色和位置，来绘制一个圆：
+-->
+<canvas id="myCanvas1" width="200" height="100" style="border: 1px solid #c3c3c3;">
+    Your browser does not support the cancas element.
+</canvas>
+<script type="text/javascript">
+    var c=document.getElementById("myCanvas1");
+    var cxt=c.getContext("2d");
+    cxt.fillStyle="#FF0000";
+    cxt.beginPath();
+    cxt.arc(70,18,15,0,Math.PI*2,true);
+    cxt.closePath();
+    cxt.fill();
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+实例 - 渐变
+使用您指定的颜色来绘制渐变背景：
+-->
+<canvas id="myCanvas2" width="200" height="100" style="border: 1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+<script type="text/javascript">
+    var c=document.getElementById("myCanvas2");
+    var cxt=c.getContext("2d");
+    var grd=cxt.createLinearGradient(0,0,175,50);
+    grd.addColorStop(0,"FF0000");
+    grd.addColorStop(1,"00FF00");
+    cxt.fillStyle=grd;
+    cxt.fillRect(0,0,175,50);
+</script>
+<br/><br/><br/><br/><br/>
+<!--谷歌浏览器显示不了-->
+
+
+
+
+
+
+<!--
+实例 - 图像
+把一幅图像放置到画布上：
+-->
+<canvas id="myCanvas3" width="200" height="100" style="border: 1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+<script type="text/javascript">
+    var c=document.getElementById("myCanvas3");
+    var cxt=c.getContext("2d");
+    var img=new Image();
+    img.src="http://www.w3school.com.cn/i/eg_flower.png";
+    cxt.drawImage(img,0,0);
+</script>
+<br/><br/><br/><br/>
+<!--Safari显示不了,在谷歌浏览器加载的时候需要重新刷新一下才可以显示出来。-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
