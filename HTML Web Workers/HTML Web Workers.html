@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Web Workers</title>
+</head>
+<body>
+
+<!--Web worker 是运行在后台的 JavaScript，不会影响页面的性能。-->
+<!--什么是 Web Worker？
+当在 HTML 页面中执行脚本时，页面是不可响应的，直到脚本已完成。
+Web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。
+您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 运行在后台。
+-->
+<p>浏览器支持</p>
+<img src="browserSupport3.png" width="500" height="117">
+<br/><br/><br/>
+
+
+
+
+
+<!--HTML Web Workers 实例
+下面的例子创建了一个简单的 web worker，在后台计数：
+-->
+<p>计数: <output id="result"></output></p>
+<button onclick="startWorker()">开始 Worker</button>
+<button onclick="stopWorker()">停止 Worker</button>
+<br /><br />
+
+<script>
+    var w;
+
+    function startWorker()
+    {
+        if(typeof(Worker)!=="undefined")
+        {
+            if(typeof(w)=="undefined")
+            {
+                w=new Worker("HTML Web Workers.js");
+            }
+            w.onmessage = function (event) {
+                document.getElementById("result").innerHTML=event.data;
+            };
+        }
+        else
+        {
+            document.getElementById("result").innerHTML="Sorry, your browser does not support Web Workers...";
+        }
+    }
+
+    function stopWorker()
+    {
+        w.terminate();
+        w=undefined;
+    }
+</script>
+
+
+<!--
+Web Worker 和 DOM
+由于 web worker 位于外部文件中，它们无法访问下例 JavaScript 对象：
+window 对象
+document 对象
+parent 对象
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
