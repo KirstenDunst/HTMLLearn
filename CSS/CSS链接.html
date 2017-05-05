@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS链接</title>
+
+    <style type="text/css">
+        a.seven:link {color: #ff0000}  /*未被访问的链接*/
+        a.seven:visited {color: #00ff00}  /*已被访问的链接*/
+        a.seven:hover {color: #ff00ff}   /*鼠标指针移动到链接上*/
+        a.seven:active {color: #0000ff}  /*正在被点击的链接*/
+
+        a.eight:link {text-decoration: none;}
+        a.eight:visited {text-decoration: none;}
+        a.eight:hover {text-decoration: underline;}
+        a.eight:active {text-decoration: underline;}
+
+        a.nine:link {background-color: #b2ff99;}
+        a.nine:visited {background-color: #ffff85;}
+        a.nine:hover {background-color: #ff704d;}
+        a.nine:active {background-color: #ff704d;}
+
+
+        a.one:link {color: #ff0000;}
+        a.one:visited {color: #0000ff;}
+        a.one:hover {
+            color: #ffcc00;}
+        a.two:link {
+            color: #ff0000;}
+        a.two:visited {
+            color: #0000ff;}
+        a.two:hover {font-size: 150%;}
+        a.three:link {
+            color: #ff0000;}
+        a.three:visited {
+            color: #0000ff;}
+        a.three:hover {background: #66ff66;}
+        a.four:link {color: #ff0000;}
+        a.four:visited {color: #0000ff;}
+        a.four:hover {font-family: '微软雅黑';}
+        a.five:link {color: #ff0000;text-decoration: none;}
+        a.five:visited {color: #0000ff;text-decoration: none;}
+        a.five:hover {text-decoration: underline;}
+
+        a.six:link,a.six:visited {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: Verdana,Arial,Helvetica,sans-serif;
+            color: #ffffff;
+            background-color: #98bf21;
+            width: 120px;
+            text-align: center;
+            padding: 4px;
+            text-decoration: none;
+        }
+        a.six:hover,a.six:active {
+            background-color: #7a991a;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<!--
+设置链接的样
+
+能够设置链接样式的 CSS 属性有很多种（例如 color, font-family, background 等等）。
+链接的特殊性在于能够根据它们所处的状态来设置它们的样式
+
+链接的四种状态：
+
+    a:link - 普通的、未被访问的链接
+    a:visited - 用户已访问的链接
+    a:hover - 鼠标指针位于链接的上方
+    a:active - 链接被点击的时刻
+
+实例
+
+a:link {color:#FF0000;}		/* 未被访问的链接 */
+a:visited {color:#00FF00;}	/* 已被访问的链接 */
+a:hover {color:#FF00FF;}	/* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}	/* 正在被点击的链接 */
+-->
+<p><b><a class="seven" href="http://www.w3school.com.cn/index.html" target="_blank">这是一个链接</a></b></p>
+<p><b>注释：</b>为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！</p>
+<p><b>注释：</b>为了使定义生效，a:active 必须位于 a:hover 之后！！</p>
+<br/><br/><br/>
+<!--当为链接的不同状态设置样式时，请按照以下次序规则：
+  a:hover 必须位于 a:link 和 a:visited 之后
+  a:active 必须位于 a:hover 之后
+-->
+
+
+
+
+
+
+
+<!--
+常见的链接样式
+
+在上面的例子中，链接根据其状态改变颜色。
+让我们看看其他几种常见的设置链接样式的方法：
+
+文本修饰
+
+text-decoration 属性大多用于去掉链接中的下划线：
+
+实例
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}
+-->
+<p><b><a class="eight" href="http://www.w3school.com.cn/index.html" target="_blank">这是一个链接</a></b></p>
+<p><b>注释：</b>为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！</p>
+<p><b>注释：</b>为了使定义生效，a:active 必须位于 a:hover 之后！！</p>
+<br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+背景色
+
+background-color 属性规定链接的背景色：
+
+实例
+
+a:link {background-color:#B2FF99;}
+a:visited {background-color:#FFFF85;}
+a:hover {background-color:#FF704D;}
+a:active {background-color:#FF704D;}
+-->
+<p><b><a class="nine" href="http://www.w3school.com.cn/index.html" target="_blank">W3School</a></b></p>
+<p><b><a class="nine" href="http://wwf.panda.org/" target="_blank">WWF</a></b></p>
+<p><b>注释：</b>为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！</p>
+<p><b>注释：</b>为了使定义生效，a:active 必须位于 a:hover 之后！！</p>
+ <br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+向链接添加不同的样式
+本例演示如何向链接添加其他样式。
+-->
+<p>请把鼠标指针移动到下面的链接上，看看他们的变化。</p>
+<p><b><a class="one" href="http://www.w3school.com.cn/index.html" target="_blank">这个链接改变颜色</a></b></p>
+<p><b><a class="two" href="http://www.w3school.com.cn/index.html" target="_blank">这个链接改变字体尺寸</a></b></p>
+<p><b><a class="three" href="http://www.w3school.com.cn/index.html" target="_blank">这个链接改变背景颜色</a></b></p>
+<p><b><a class="four" href="http://www.w3school.com.cn/index.html" target="_blank">这个链接改变字体</a></b></p>
+<p><b><a class="five" href="http://www.w3school.com.cn/index.html" target="_blank">这个链接改变文本装饰</a></b></p>
+<br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+高级 - 创建链接框
+本例演示了更高级的示例，我们结合了若干种 CSS 属性，来把链接显示为方框。
+-->
+<a class="six" href="http://www.w3school.com.cn/index.html" target="_blank">W3School</a>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
