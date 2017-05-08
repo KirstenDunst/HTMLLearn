@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS表格</title>
+
+    <style type="text/css">
+        table.text1,th.text1,td.text1 {border: 1px solid blue}
+
+        table.text2 {border-collapse: collapse;}
+        table.text2,td.text2,th.text2 {border: 1px solid black;}
+
+        table.text3,td.text3,th.text3 {border: 1px solid black;}
+        table.text3 {width: 100%;}
+        th.text3 {height: 50px;}
+
+        table.text4,td.text4,th.text4 {border: 1px solid black;}
+        td.text4 {text-align: right;}
+
+        table.text5,td.text5,th.text5 {border: 1px solid black;}
+        td.text5 {height: 50px;vertical-align: bottom;}
+
+        table.text6,td.text6,th.text6 {border: 1px solid black;}
+        td.text6 {padding: 15px;}
+
+        table.text7,td.text7,th.text7 {border: 1px solid green;}
+        th.text7 {background-color: green;color: white;}
+
+        #customers {
+            font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #customers td, #customers th {
+            font-size: 1em;
+            border: 1px solid #98bf21;
+            padding: 3px 7px 2px 7px;
+        }
+        #customers th {
+            font-size: 1.1em;
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: #a7c942;
+            color: #ffffff;
+        }
+        #customers tr.alt td {
+            color: #000000;
+            background-color: #eaf2d3;
+        }
+
+        table.text8 {border-collapse: separate;empty-cells: hide;}
+
+        table.one {
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+        table.two {
+            border-collapse: separate;
+            border-spacing: 10px 50px;
+        }
+
+        caption {caption-side: bottom;}
+
+    </style>
+
+</head>
+<body>
+
+<!--CSS 表格属性可以帮助您极大地改善表格的外观。-->
+
+<!--表格边框
+如需在 CSS 中设置表格边框，请使用 border 属性。
+下面的例子为 table、th 以及 td 设置了蓝色边框：
+table, th, td
+  {
+  border: 1px solid blue;
+  }
+-->
+<table class="text1">
+    <tr>
+        <th class="text1">Firstname</th>
+        <th class="text1">Lastname</th>
+    </tr>
+    <tr>
+        <th class="text1">Bill</th>
+        <th class="text1">Gates</th>
+    </tr>
+    <tr>
+        <th class="text1">Steven</th>
+        <th class="text1">Jobs</th>
+    </tr>
+</table>
+<br/><br/><br/><br/>
+<!--请注意，上例中的表格具有双线条边框。这是由于 table、th 以及 td 元素都有独立的边框。
+如果需要把表格显示为单线条边框，请使用 border-collapse 属性。-->
+
+
+
+
+
+
+
+<!--折叠边框
+border-collapse 属性设置是否将表格边框折叠为单一边框：
+table
+  {
+  border-collapse:collapse;
+  }
+
+table,th, td
+  {
+  border: 1px solid black;
+  }
+-->
+<table class="text2">
+    <tr>
+        <th class="text2">Firstname</th>
+        <th class="text2">Lastname</th>
+    </tr>
+    <tr>
+        <td class="text2">Bill</td>
+        <td class="text2">Gates</td>
+    </tr>
+    <tr>
+        <td class="text2">Steven</td>
+        <td class="text2">Jobs</td>
+    </tr>
+</table>
+<p><b>注释：</b>如果没有规定 ！DOCTYPE, border-collapse属性可能会引起意想不到的错误。</p>
+<br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+表格宽度和高度
+通过 width 和 height 属性定义表格的宽度和高度。
+下面的例子将表格宽度设置为 100%，同时将 th 元素的高度设置为 50px：
+table
+  {
+  width:100%;
+  }
+
+th
+  {
+  height:50px;
+  }
+-->
+<table class="text3">
+    <tr>
+        <th class="text3">Firstname</th>
+        <th class="text3">Lastname</th>
+    </tr>
+    <tr>
+        <td class="text3">Bill</td>
+        <td class="text3">Gates</td>
+    </tr>
+    <tr>
+        <td class="text3">Steven</td>
+        <td class="text3">Jobs</td>
+    </tr>
+</table>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+<!--
+表格文本对齐
+text-align 和 vertical-align 属性设置表格中文本的对齐方式。
+text-align 属性设置水平对齐方式，比如左对齐、右对齐或者居中：
+td
+  {
+  text-align:right;
+  }
+-->
+<table class="text4">
+    <tr>
+        <th class="text4">Firstname</th>
+        <th class="text4">Lastname</th>
+    </tr>
+    <tr>
+        <td class="text4">Bill</td>
+        <td class="text4">Gates</td>
+    </tr>
+    <tr>
+        <td class="text4">Steven</td>
+        <td class="text4">Jobs</td>
+    </tr>
+</table>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+<!--
+vertical-align 属性设置垂直对齐方式，比如顶部对齐、底部对齐或居中对齐：
+td
+  {
+  height:50px;
+  vertical-align:bottom;
+  }
+-->
+<table class="text5">
+    <tr>
+        <th class="text5">Fiestname</th>
+        <th class="text5">Lastname</th>
+    </tr>
+    <tr>
+        <td class="text5">Bill</td>
+        <td class="text5">Gates</td>
+    </tr>
+    <tr>
+        <td class="text5">Bill</td>
+        <td class="text5">Jobs</td>
+    </tr>
+</table>
+<br/><br/><br/><br/>
+<hr/>
+
+
+
+
+
+
+
+<!--
+表格内边距
+如需控制表格中内容与边框的距离，请为 td 和 th 元素设置 padding 属性：
+td
+  {
+  padding:15px;
+  }
+-->
+<table class="text6">
+    <tr>
+        <th class="text6">Firstname</th>
+        <th class="text6">Lastname</th>
+    </tr>
+    <tr>
+        <td class="text6">Bill</td>
+        <td class="text6">Gates</td>
+    </tr>
+    <tr>
+        <td class="text6">Steven</td>
+        <td class="text6">Jobs</td>
+    </tr>
+</table>
+<br/><br/><br/><br/>
+<hr/>
+
+
+
+
+
+
+
+<!--
+表格颜色
+下面的例子设置边框的颜色，以及 th 元素的文本和背景颜色：
+table, td, th
+  {
+  border:1px solid green;
+  }
+
+th
+  {
+  background-color:green;
+  color:white;
+  }
+-->
+<table class="text7">
+    <tr>
+        <th class="text7">Firstname</th>
+        <th class="text7">Lastname</th>
+    </tr>
+    <tr>
+        <td class="text7">Bill</td>
+        <td class="text7">Gates</td>
+    </tr>
+    <tr>
+        <td class="text7">Steven</td>
+        <td class="text7">Jobs</td>
+    </tr>
+</table>
+<br/><br/><br/><br/>
+<hr/>
+
+
+
+
+
+
+
+<!--
+CSS Table 属性
+
+属性	                    描述
+border-collapse	设置是否把表格边框合并为单一的边框。
+border-spacing	设置分隔单元格边框的距离。
+caption-side	设置表格标题的位置。
+empty-cells	    设置是否显示表格中的空单元格。
+table-layout	设置显示单元、行和列的算法。
+-->
+
+<hr/><hr/>
+
+
+
+
+
+<!--
+制作一个漂亮的表格
+本例演示如何创造一个漂亮的表格。
+-->
+<table id="customers">
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Apple</td>
+        <td>Steven Jobs</td>
+        <td>USA</td>
+    </tr>
+    <tr class="alt">
+        <td>Baidu</td>
+        <td>Li YanHong</td>
+        <td>China</td>
+    </tr>
+    <tr>
+        <td>Google</td>
+        <td>Larry Page</td>
+        <td>USA</td>
+    </tr>
+    <tr class="alt">
+        <td>Lenovo</td>
+        <td>Liu Chuanzhi</td>
+        <td>China</td>
+    </tr>
+    <tr>
+        <td>Microsoft</td>
+        <td>Bill Gates</td>
+        <td>USA</td>
+    </tr>
+    <tr class="alt">
+        <td>Nokia</td>
+        <td>Stephen Elop</td>
+        <td>Finland</td>
+    </tr>
+</table>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+显示表格中的空单元
+本例演示是否显示表格中的空单元。
+-->
+<table class="text8" border="1">
+    <tr>
+        <td>Adams</td>
+        <td>John</td>
+    </tr>
+    <tr>
+        <td>Bush</td>
+        <td></td>
+    </tr>
+</table>
+<p><b>注释：</b>如果已规定 ！DOCTYPE,那么 Internet Explorer 8 (以及更高版本) 支持 empty-cells 属性。</p>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+设置表格边框之间的空白
+本例演示如何设置单元格边框之间的距离。
+-->
+<table class="one" border="1">
+    <tr>
+        <td>Adams</td>
+        <td>John</td>
+    </tr>
+    <tr>
+        <td>Bush</td>
+        <td>George</td>
+    </tr>
+</table>
+<br/>
+<table class="two" border="1">
+    <tr>
+        <td>Carter</td>
+        <td>Thomas</td>
+    </tr>
+    <tr>
+        <td>Gates</td>
+        <td>Bill</td>
+    </tr>
+</table>
+<p><b>注释：</b>如果已规定 ！ DOCTYPE, 那么 Iinternet Eexplorer 8 (以及更高版本) 支持 border-spacing属性。</p>
+<br/><br/><br/>
+
+
+
+
+
+
+<!--
+设置表格标题的位置
+本例演示如何定位表格的标题。
+-->
+<table border="1">
+    <caption>This is a caption</caption>
+    <tr>
+        <td>Adams</td>
+        <td>John</td>
+    </tr>
+    <tr>
+        <td>Bush</td>
+        <td>George</td>
+    </tr>
+</table>
+<p><b>注释：</b>如果已规定 ！DOCTYPE,那么 Iinternet Explorer 8 (以及更高版本) 支持 caption-side 属性。</p>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
