@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 注意事项</title>
+
+    <style type="text/css">
+        h1 {behavior:url("http://www.w3school.com.cn/example/csse/behave.htc")}
+
+        #typing
+        {
+            behavior:url("http://www.w3school.com.cn/example/csse/behave_typing.htc");
+            font-family:'courier new';
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--本节列出了在使用 CSS 时尽量避免使用的技术。-->
+
+
+<!--
+Internet Explorer Behaviors
+它是什么？Internet Explorer 5 引入了行为 (behaviors)。behaviors 是一种通过使用 CSS 向 HTML 元素添加行为的方法。
+为什么要避免它？只有 Internet Explorer 支持 behavior 属性。
+用什么代替？请使用 JavaScript 和 HTML DOM 取而代之。
+-->
+
+
+
+
+
+
+<!--
+例子 1 - Mouseover Highlight
+下面的 HTML 文件中有一个 <style> 元素，它为 <h1> 元素定义了一个行为：
+
+<html>
+<head>
+<style type="text/css">
+h1 { behavior: url(behave.htc) }
+</style>
+</head>
+
+<body>
+<h1>Mouse over me!!!</h1>
+</body>
+</html>
+
+下面是 XML 文档 "behave.htc"：
+
+<attach for="element" event="onmouseover" handler="hig_lite" />
+<attach for="element" event="onmouseout" handler="low_lite" />
+
+<script type="text/javascript">
+function hig_lite()
+{
+element.style.color='red';
+}
+
+function low_lite()
+{
+element.style.color='blue';
+}
+</script>
+
+behavior 文件包含了针对元素的 JavaScript 和 事件句柄。
+-->
+<h1>Mouse over me!!!</h1>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+例子 2 - Typewriter Simulation
+
+下面的 HTML 文件中有一个 <style> 元素，它为 id 为 "typing" 的元素定义了一个行为：
+
+<html>
+<head>
+<style type="text/css">
+#typing
+{
+behavior:url(behave_typing.htc);
+font-family:'courier new';
+}
+</style>
+</head>
+
+<body>
+<span id="typing" speed="100">IE5 introduced DHTML behaviors.
+Behaviors are a way to add DHTML functionality to HTML elements
+with the ease of CSS.<br /><br />How do behaviors work?<br />
+By using XML we can link behaviors to any element in a web page
+and manipulate that element.</p>
+</span>
+</body>
+</html>
+
+下面是 XML 文档 "behave.htc"：
+
+<attach for="window" event="onload" handler="beginTyping" />
+<method name="type" />
+
+<script type="text/javascript">
+var i,text1,text2,textLength,t;
+
+function beginTyping()
+{
+i=0;
+text1=element.innerText;
+textLength=text1.length;
+element.innerText="";
+text2="";
+t=window.setInterval(element.id+".type()",speed);
+}
+
+function type()
+{
+text2=text2+text1.substring(i,i+1);
+element.innerText=text2;
+i=i+1;
+if (i==textLength)
+  {
+  clearInterval(t);
+  }
+}
+</script>
+-->
+<span id="typing" speed="100">
+    IE5 introduced DHTML behaviors. Behaviors are a way to add DHTML functionality to HTML elements with the ease of
+    CSS.<br /><br />
+How does behaviors work?<br />By using XML we can link behaviors to any element in a web page and manipulate that element.
+    </p>
+</span>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
