@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 分类</title>
+
+    <style type="text/css">
+        p {
+            display: inline;
+        }
+        div {
+            display: none;
+        }
+
+        span {
+            display: block;
+        }
+
+        h1.visible {visibility: visible}
+        h1.invisible {visibility: hidden}
+
+        tr.coll {
+            visibility: collapse;
+        }
+
+        img
+        {
+            float:left;
+            clear:both;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<!--如何把元素显示为内联元素
+本例演示如何把元素显示为内联元素。-->
+<p>本例中的样式表把段落元素设置为内联元素。</p>
+<p>而 div 元素不会显示出来！</p>
+<div>div 元素的内容不会显示出来！</div>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!--如何把元素显示为块级元素
+本例演示如何把元素显示为块级元素。-->
+<span>本例中的样式表把 span 元素设置为块级元素。</span>
+<span>两个 span 元素之间产生了一个换行行为。</span>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+<!--
+////////////前面已有这些例子，这里不再列出。
+
+float 属性的简单应用
+使图像浮动于一个段落的右侧。
+
+将带有边框和边界的图像浮动于段落的右侧
+使图像浮动于段落的右侧。向图像添加边框和边界。
+
+带标题的图像浮动于右侧
+使带有标题的图像浮动于右侧
+
+使段落的首字母浮动于左侧
+使段落的首字母浮动于左侧，并向这个字母添加样式。
+
+创建水平菜单
+使用具有一栏超链接的浮动来创建水平菜单。
+
+创建无表格的首页
+使用浮动来创建拥有页眉、页脚、左侧目录和主体内容的首页。
+
+定位：相对定位
+本例演示如何相对于一个元素的正常位置来对其定位。
+
+定位：绝对定位
+本例演示如何使用绝对值来对元素进行定位。
+
+定位：固定定位
+本例演示如何相对于浏览器窗口来对元素进行定位。
+-->
+
+
+
+
+
+
+<!--
+如何使元素不可见
+本例演示如何使元素不可见。你希望元素被显示出来，还是不呢？-->
+<h1 class="visible">这是可见的标题</h1>
+<h1 class="invisible">这是不可见的标题</h1>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!--
+把表格元素设置为 collapse（请在非 IE 的浏览器中查看）
+本例演示如何使表格元素叠加？
+-->
+<table border="1">
+    <tr>
+        <td>Adams</td>
+        <td>John</td>
+    </tr>
+    <tr class="coll">
+        <td>Bush</td>
+        <td>George</td>
+    </tr>
+</table>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+改变光标
+本例演示如何改变光标。
+-->
+<p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
+<span style="cursor:auto">
+Auto</span><br />
+<span style="cursor:crosshair">
+Crosshair</span><br />
+<span style="cursor:default">
+Default</span><br />
+<span style="cursor:pointer">
+Pointer</span><br />
+<span style="cursor:move">
+Move</span><br />
+<span style="cursor:e-resize">
+e-resize</span><br />
+<span style="cursor:ne-resize">
+ne-resize</span><br />
+<span style="cursor:nw-resize">
+nw-resize</span><br />
+<span style="cursor:n-resize">
+n-resize</span><br />
+<span style="cursor:se-resize">
+se-resize</span><br />
+<span style="cursor:sw-resize">
+sw-resize</span><br />
+<span style="cursor:s-resize">
+s-resize</span><br />
+<span style="cursor:w-resize">
+w-resize</span><br />
+<span style="cursor:text">
+text</span><br />
+<span style="cursor:wait">
+wait</span><br />
+<span style="cursor:help">
+help</span>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+清除元素的侧面
+本例演示如何使用清除元素侧面的浮动元素。
+-->
+<img src="http://www.w3school.com.cn/i/eg_smile.gif" />
+<img src="http://www.w3school.com.cn/i/eg_smile.gif" />
+
+
+
+
+
+
+
+<!--
+CSS 分类属性 (Classification)
+
+CSS 分类属性允许你控制如何显示元素，设置图像显示于另一元素中的何处，相对于其正常位置来定位元素，使用绝对值来定位元素，以及元素的可见度。
+
+属性                 	描述
+clear	    设置一个元素的侧面是否允许其他的浮动元素。
+cursor	    规定当指向某元素之上时显示的指针类型。
+display	    设置是否及如何显示元素。
+float	    定义元素在哪个方向浮动。
+position	把元素放置到一个静态的、相对的、绝对的、或固定的位置中。
+visibility	设置元素是否可见或不可见。
+-->
+
+
+
+
+
+
+</body>
+</html>
