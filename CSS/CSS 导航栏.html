@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 导航栏</title>
+
+    <style type="text/css">
+        ul.text1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a.text1 {
+            display: block;
+            width: 60px;
+            background-color: #dddddd;
+        }
+
+        ul.text2
+        {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+        }
+        li.text2
+        {
+            display:inline;
+        }
+
+        ul.text3
+        {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            padding-top:6px;
+            padding-bottom:6px;
+        }
+        li.text3
+        {
+            display:inline;
+        }
+        a.text3:link,a.text3:visited
+        {
+            font-weight:bold;
+            color:#FFFFFF;
+            background-color:#98bf21;
+            text-align:center;
+            padding:6px;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+        a.text3:hover,a.text3:active
+        {
+            background-color:#7A991A;
+        }
+
+        ul.text4
+        {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+        }
+        li.text4
+        {
+            float:left;
+        }
+        a.text4
+        {
+            display:block;
+            width:60px;
+            background-color:#dddddd;
+        }
+
+        ul.text5
+        {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+        }
+        li.text5
+        {
+            float:left;
+        }
+        a.text5:link,a.text5:visited
+        {
+            display:block;
+            width:120px;
+            font-weight:bold;
+            color:#FFFFFF;
+            background-color:#bebebe;
+            text-align:center;
+            padding:4px;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+        a.text5:hover,a.text5:active
+        {
+            background-color:#cc0000;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<!--
+导航栏
+拥有易用的导航条对于任何网站都很重要。
+通过 CSS，您能够把乏味的 HTML 菜单转换为漂亮的导航栏。-->
+
+
+
+<!--
+导航栏 = 链接列表
+导航栏需要标准的 HTML 作为基础。
+在我们的例子中，将用标准的 HTML 列表来构建导航栏。
+导航栏基本上是一个链接列表，因此使用 <ul> 和 <li> 元素是非常合适的：
+实例
+<ul>
+<li><a href="default.asp">Home</a></li>
+<li><a href="news.asp">News</a></li>
+<li><a href="contact.asp">Contact</a></li>
+<li><a href="about.asp">About</a></li>
+</ul>
+-->
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+<p><b>注释：</b>我们使用在测试链接中使用了 href="#"。在真实的网站中，应该是真实的 URL。</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+现在，让我们从列表中去掉圆点和外边距：
+
+实例
+
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+-->
+<ul class="text1">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+<br/><br/><br/><br/><br/>
+<!--
+例子解释：
+list-style-type:none - 删除圆点。导航栏不需要列表项标记。
+把外边距和内边距设置为 0 可以去除浏览器的默认设定。
+以上例子中的代码是用在垂直、水平导航栏中的标准代码。
+-->
+
+
+
+
+
+
+
+<!--
+垂直导航栏
+如需构建垂直导航栏，我们只需要定义 <a> 元素的样式，除了上面的代码之外：
+实例
+a
+{
+display:block;
+width:60px;
+}
+-->
+<p>垂直导航栏</p>
+<ul class="text1">
+    <li><a class="text1" href="#home">Home</a></li>
+    <li><a class="text1" href="#news">News</a></li>
+    <li><a class="text1" href="#contact">Contact</a></li>
+    <li><a class="text1" href="#about">About</a></li>
+</ul>
+
+<p>为了显示出链接区域，我们为链接添加了背景色。</p>
+<p>请注意，全部链接区域都是可点击的，不仅仅是文本。</p>
+<br/><br/><br/><br/><br/><br/><br/>
+<!--
+例子解释：
+
+display:block - 把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），同时也允许我们规定宽度。
+width:60px - 块元素默认占用全部可用宽度。我们需要规定 60 像素的宽度。
+
+提示：请同时看一看我们完整样式的导航栏实例。
+
+注释：请始终规定垂直导航栏中 <a> 元素的宽度。如果省略宽度，IE6 会产生意想不到的结果。
+-->
+
+
+
+
+
+
+
+
+<!--
+水平导航栏
+
+有两种创建水平导航栏的方法。使用行内或浮动列表项。
+两种方法都不错，但是如果您希望链接拥有相同的尺寸，就必须使用浮动方法。
+
+行内列表项
+
+除了上面的“标准”代码，构建水平导航栏的方法之一是将 <li> 元素规定为行内元素：
+
+实例
+
+li
+{
+display:inline;
+}
+-->
+<p>水平导航栏</p>
+<ul class="text2">
+    <li class="text2"><a href="#home">Home</a></li>
+    <li class="text2"><a href="#news">News</a></li>
+    <li class="text2"><a href="#contact">Contact</a></li>
+    <li class="text2"><a href="#about">About</a></li>
+</ul>
+<br/><br/><br/><br/><br/><br/>
+<!--
+例子解释：
+display:inline; - 默认地，<li> 元素是块元素。在这里，我们去除了每个列表项前后的换行，以便让它们在一行中显示。
+提示：请看一下我们完整样式的水平导航栏实例:
+-->
+<ul class="text3">
+    <li class="text3"><a class="text3" href="#home">Home</a></li>
+    <li class="text3"><a class="text3" href="#news">News</a></li>
+    <li class="text3"><a class="text3" href="#contact">Contact</a></li>
+    <li class="text3"><a class="text3" href="#about">About</a></li>
+</ul>
+
+<p>
+    <b>
+        注释：
+    </b>
+    如果您只为 a 元素设置内边距（而不设置 ul 元素），那么链接会出现在 ul 元素之外。所以，我们为 ul 元素添加了 top 和 bottom 内边距。
+</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+对列表项进行浮动
+在上面的例子中，链接的宽度是不同的。
+为了让所有链接拥有相等的宽度，浮动 <li> 元素并规定 <a> 元素的宽度：
+实例
+li
+{
+float:left;
+}
+a
+{
+display:block;
+width:60px;
+}
+-->
+<p>对列表项进行浮动</p>
+<ul class="text4">
+    <li class="text4"><a class="text4" href="#home">Home</a></li>
+    <li class="text4"><a class="text4" href="#news">News</a></li>
+    <li class="text4"><a class="text4" href="#contact">Contact</a></li>
+    <li class="text4"><a class="text4" href="#about">About</a></li>
+</ul>
+
+<p><b>注释：</b>如果没有规定 !DOCTYPE，则浮动项目会产生意想不到的结果。</p>
+
+<p>为了显示出链接区域，我们为链接添加了背景色。</p>
+
+<p><b>注释：</b>向 ul 元素添加 overflow:hidden，是为了防止 li 元素出现在列表之外。</p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+<!--
+例子解释：
+float:left - 使用 float 来把块元素滑向彼此。
+display:block - 把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），同时也允许我们规定宽度。
+width:60px - 由于块元素默认占用全部可用宽度，链接无法滑动至彼此相邻。我们需要规定 60 像素的宽度。
+
+提示：请看一下我们完整样式的水平导航栏实例:
+-->
+<ul class="text5">
+    <li class="text5"><a class="text5" href="#home">Home</a></li>
+    <li class="text5"><a class="text5" href="#news">News</a></li>
+    <li class="text5"><a class="text5" href="#contact">Contact</a></li>
+    <li class="text5"><a class="text5" href="#about">About</a></li>
+</ul>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+</body>
+</html>
