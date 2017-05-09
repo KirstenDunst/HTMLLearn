@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 伪类</title>
+
+    <style type="text/css">
+        a:link {color: #ff0000}
+        a:visited {color: #00ff00}
+        a:hover {color: #ff00ff}
+        a:active {color: #0000ff}
+
+        a.one:link {color: #ff0000}
+        a.one:visited {color: #0000ff}
+        a.one:hover {color: #ffcc00}
+
+        a.two:link {color: #ff0000}
+        a.two:visited {color: #0000ff}
+        a.two:hover {font-size: 150%}
+
+        a.three:link {color: #ff0000}
+        a.three:visited {color: #0000ff}
+        a.three:hover {background: #66ff66}
+
+        a.four:link {color: #ff0000}
+        a.four:visited {color: #0000ff}
+        a.four:hover {font-family: monospace}
+
+        a.five:link {color: #ff0000; text-decoration: none}
+        a.five:visited {color: #0000ff; text-decoration: none}
+        a.five:hover {text-decoration: underline}
+
+        input:focus {
+            background-color: yellow;
+        }
+
+        p:first-child {font-weight: bold;}
+        li:first-child {text-transform: uppercase;}
+
+        q:lang(no) {quotes: "~" "~"}
+
+        p:first-child {
+            color: red;
+        }
+
+        p.text5 > i:first-child {
+            font-weight: bold;
+        }
+
+        p:first-child i {
+            color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--CSS 伪类用于向某些选择器添加特殊的效果。-->
+
+
+<!--CSS 伪类 (Pseudo-classes)实例：-->
+
+
+<!--
+超链接
+本例演示如何向文档中的超链接添加不同的颜色。
+-->
+<p><b><a href="/index.html" target="_blank">这是一个链接。</a></b></p>
+<p><b>注释：</b>在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后，这样才能生效！</p>
+<p><b>注释：</b>在 CSS 定义中，a:active 必须位于 a:hover 之后，这样才能生效！</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!--超链接 2
+本例演示如何向超链接添加其他样式。
+-->
+<p>请把鼠标移动到这些链接上，以查看效果：</p>
+<p><b><a class="one" href="/index.html" target="_blank">这个链接改变颜色</a></b></p>
+<p><b><a class="two" href="/index.html" target="_blank">这个链接改变字体大小</a></b></p>
+<p><b><a class="three" href="/index.html" target="_blank">这个链接改变背景颜色</a></b></p>
+<p><b><a class="four" href="/index.html" target="_blank">这个链接改变字体系列</a></b></p>
+<p><b><a class="five" href="/index.html" target="_blank">这个链接改变文本装饰</a></b></p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!--超链接 - :focus 的使用
+本例演示如何对超链接应用 :focus 伪类（无法在 IE 中工作）。
+-->
+<form action="http://www.w3school.com.cn/form_action.asp" method="get">
+    First name: <input type="text" name="fname"><br/>
+    Last name: <input type="text" name="fname"><br/>
+    <input type="submit" value="Submit">
+</form>
+<p><b>注释：</b>如果已规定！DOCTYPE,那么 Internet Explorer 8（以及更高版本）支持 ：focus 伪类。</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--:first-child（首个子对象）
+本例演示 :first-child 伪类的用法。
+-->
+<div>
+    <p>These are the necessary steps:</p>
+    <ul>
+        <li>Inter Key</li>
+        <li>Turn Key <strong>clockwise</strong></li>
+        <li>Push accelerator</li>
+    </ul>
+    <p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+</div>
+<p><b>注释：</b>必须声明 DOCTYP，这样 ：first-child才能在IE中生效。</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--:lang（语言）
+本例演示 :lang 伪类的用法。-->
+<p>:lang 伪类允许您为不同的语言定义特殊的规则。在下面的例子中，：lang类为带有值为"no"的lang属性 q 元素定义引号的类型：</p>
+<p>一些文本<q lang="no">段落中的引用</q>一些文本。</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+语法
+
+伪类的语法：
+
+selector : pseudo-class {property: value}
+
+CSS 类也可与伪类搭配使用。
+
+selector.class : pseudo-class {property: value}
+
+锚伪类
+
+在支持 CSS 的浏览器中，链接的不同状态都可以不同的方式显示，这些状态包括：活动状态，已被访问状态，未被访问状态，和鼠标悬停状态。
+
+a:link {color: #FF0000}		/* 未访问的链接 */
+a:visited {color: #00FF00}	/* 已访问的链接 */
+a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
+a:active {color: #0000FF}	/* 选定的链接 */
+-->
+
+<!--
+提示：在 CSS 定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+提示：在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+提示：伪类名称对大小写不敏感。
+-->
+
+
+
+
+
+
+
+
+
+<!--
+伪类与 CSS 类
+
+伪类可以与 CSS 类配合使用：
+
+a.red : visited {color: #FF0000}
+
+<a class="red" href="css_syntax.asp">CSS Syntax</a>
+
+假如上面的例子中的链接被访问过，那么它将显示为红色。
+
+CSS2 - :first-child 伪类
+
+您可以使用 :first-child 伪类来选择元素的第一个子元素。这个特定伪类很容易遭到误解，所以有必要举例来说明。考虑以下标记：
+
+<div>
+<p>These are the necessary steps:</p>
+<ul>
+<li>Intert Key</li>
+<li>Turn key <strong>clockwise</strong></li>
+<li>Push accelerator</li>
+</ul>
+<p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+</div>
+
+在上面的例子中，作为第一个元素的元素包括第一个 p、第一个 li 和 strong 和 em 元素。
+
+给定以下规则：
+
+p:first-child {font-weight: bold;}
+li:first-child {text-transform:uppercase;}
+
+第一个规则将作为某元素第一个子元素的所有 p 元素设置为粗体。第二个规则将作为某个元素（在 HTML 中，这肯定是 ol 或 ul 元素）第一个子元素
+的所有 li 元素变成大写。
+
+请访问该链接，来查看这个 :first-child 实例的效果。(上面的例子)
+
+提示：最常见的错误是认为 p:first-child 之类的选择器会选择 p 元素的第一个子元素。
+
+注释：必须声明 <!DOCTYPE>，这样 :first-child 才能在 IE 中生效。
+为了使您更透彻地理解 :first-child 伪类，我们另外提供了 3 个例子：
+
+例子 1 - 匹配第一个 <p> 元素
+
+在下面的例子中，选择器匹配作为任何元素的第一个子元素的 p 元素：
+
+<html>
+<head>
+<style type="text/css">
+p:first-child {
+  color: red;
+  }
+</style>
+</head>
+
+<body>
+<p>some text</p>
+<p>some text</p>
+</body>
+</html>
+-->
+<p>some text</p>
+<p>some text</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+
+例子 2 - 匹配所有 <p> 元素中的第一个 <i> 元素
+
+在下面的例子中，选择器匹配所有 <p> 元素中的第一个 <i> 元素：
+
+<html>
+<head>
+<style type="text/css">
+p > i:first-child {
+  font-weight:bold;
+  }
+</style>
+</head>
+
+<body>
+<p>some <i>text</i>. some <i>text</i>.</p>
+<p>some <i>text</i>. some <i>text</i>.</p>
+</body>
+</html>
+-->
+<p class="text5">some <i>text</i>. some <i>text</i>.</p>
+<p class="text5">some <i>text</i>. some <i>text</i>.</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+例子 3 - 匹配所有作为第一个子元素的 <p> 元素中的所有 <i> 元素
+
+在下面的例子中，选择器匹配所有作为元素的第一个子元素的 <p> 元素中的所有 <i> 元素：
+
+<html>
+<head>
+<style type="text/css">
+p:first-child i {
+  color:blue;
+  }
+</style>
+</head>
+
+<body>
+<p>some <i>text</i>. some <i>text</i>.</p>
+<p>some <i>text</i>. some <i>text</i>.</p>
+</body>
+</html>
+-->
+<p class="text6">some <i>text</i>. some <i>text</i>.</p>
+<p class="text6">some <i>text</i>. some <i>text</i>.</p>
+
+
+
+
+
+
+
+
+<!--
+CSS2 - :lang 伪类
+
+:lang 伪类使你有能力为不同的语言定义特殊的规则。在下面的例子中，:lang 类为属性值为 no 的 q 元素定义引号的类型：
+
+<html>
+<head>
+
+<style type="text/css">
+q:lang(no)
+   {
+   quotes: "~" "~"
+   }
+</style>
+
+</head>
+
+<body>
+<p>文字<q lang="no">段落中的引用的文字</q>文字</p>
+</body></html>
+-->
+
+
+
+
+
+
+
+<!--
+伪类
+
+W3C："W3C" 列指示出该属性在哪个 CSS 版本中定义（CSS1 还是 CSS2）。
+
+属性	                     描述	                    CSS
+:active	       向被激活的元素添加样式。	                 1
+:focus	       向拥有键盘输入焦点的元素添加样式。	     2
+:hover	       当鼠标悬浮在元素上方时，向元素添加样式。	 1
+:link	       向未被访问的链接添加样式。	             1
+:visited	   向已被访问的链接添加样式。	             1
+:first-child   向元素的第一个子元素添加样式。	         2
+:lang	       向带有指定 lang 属性的元素添加样式。     	 2
+
+-->
+
+
+
+
+
+
+
+
+
+</body>
+</html>
