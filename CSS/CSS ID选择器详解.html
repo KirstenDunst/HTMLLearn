@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS ID选择器详解</title>
+
+    <style type="text/css">
+        #intro {font-weight: bold;background-color: cyan;}
+
+        #mostImportant1 {color: red;background: yellow;}
+        #mostImportant2 {color:red; background:yellow;}
+        #mostImportant3 {color:red; background:yellow;}
+
+    </style>
+
+</head>
+<body>
+
+<!--ID 选择器允许以一种独立于文档元素的方式来指定样式。-->
+
+<!--
+CSS ID 选择器
+
+在某些方面，ID 选择器类似于类选择器，不过也有一些重要差别。
+
+语法
+
+首先，ID 选择器前面有一个 # 号 - 也称为棋盘号或井号。
+
+请看下面的规则：
+
+*#intro {font-weight:bold;}
+
+与类选择器一样，ID 选择器中可以忽略通配选择器。前面的例子也可以写作：
+
+#intro {font-weight:bold;}
+
+这个选择器的效果将是一样的。
+第二个区别是 ID 选择器不引用 class 属性的值，毫无疑问，它要引用 id 属性中的值。
+以下是一个实际 ID 选择器的例子：
+
+<p id="intro">This is a paragraph of introduction.</p>
+-->
+
+<p id="intro">This is a paragraph of introduction.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>...</p>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+<!--
+类选择器还是 ID 选择器？
+
+在类选择器这一章中我们曾讲解过，可以为任意多个元素指定类。前一章中类名 important 被应用到 p 和 h1 元素，而且它还可以应用到更多元素。
+
+区别 1：只能在文档中使用一次
+与类不同，在一个 HTML 文档中，ID 选择器会使用一次，而且仅一次。
+
+区别 2：不能使用 ID 词列表
+不同于类选择器，ID 选择器不能结合使用，因为 ID 属性不允许有以空格分隔的词列表。
+
+区别 3：ID 能包含更多含义
+类似于类，可以独立于元素来选择 ID。有些情况下，您知道文档中会出现某个特定 ID 值，但是并不知道它会出现在哪个元素上，所以您想声明独立的
+ID 选择器。例如，您可能知道在一个给定的文档中会有一个 ID 值为 mostImportant 的元素。您不知道这个最重要的东西是一个段落、一个短语、一个
+列表项还是一个小节标题。您只知道每个文档都会有这么一个最重要的内容，它可能在任何元素中，而且只能出现一个。在这种情况下，可以编写如下规则：
+
+#mostImportant {color:red; background:yellow;}
+
+这个规则会与以下各个元素匹配（这些元素不能在同一个文档中同时出现，因为它们都有相同的 ID 值）：
+
+<h1 id="mostImportant">This is important!</h1>
+<em id="mostImportant">This is important!</em>
+<ul id="mostImportant">This is important!</ul>
+
+亲自试一试：
+-->
+<p>为 id 为 mostImportant 的 h1 元素设定样式</p>
+<h1 id="mostImportant1">This is important!</h1>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>...</p>
+<br/><br/><br/><br/><br/>
+
+
+<p>为 id 为 mostImportant 的 em 元素设定样式</p>
+<h1>This is important!</h1>
+<p>This is a <em id="mostImportant2">paragraph</em>.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>...</p>
+
+
+<p>为 id 为 mostImportant 的 ul 元素设定样式</p>
+<h1>This is important!</h1>
+<ul id="mostImportant3">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>...</p>
+
+
+
+
+
+<!--
+区分大小写
+
+请注意，类选择器和 ID 选择器可能是区分大小写的。这取决于文档的语言。HTML 和 XHTML 将类和 ID 值定义为区分大小写，所以类和 ID 值的大小写
+必须与文档中的相应值匹配。
+
+因此，对于以下的 CSS 和 HTML，元素不会变成粗体：
+
+#intro {font-weight:bold;}
+
+<p id="Intro">This is a paragraph of introduction.</p>
+
+由于字母 i 的大小写不同，所以选择器不会匹配上面的元素。
+
+-->
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
