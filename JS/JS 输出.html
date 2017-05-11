@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 输出</title>
+</head>
+<body>
+
+<!--JavaScript 通常用于操作 HTML 元素。-->
+
+<!--
+操作 HTML 元素
+
+如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。
+请使用 "id" 属性来标识 HTML 元素：
+
+例子:
+
+通过指定的 id 来访问 HTML 元素，并改变其内容：
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+
+<p id="demo">My First Paragraph</p>
+
+<script>
+document.getElementById("demo").innerHTML="My First JavaScript";
+</script>
+
+</body>
+</html>
+-->
+<hr/>
+<h1>My First Web Page</h1>
+<p id="demo1">My First Paragraph.</p>
+<script>
+    document.getElementById("demo1").innerHTML="My First JavaScript直接替换掉的，浏览器将访问 id=demo 的 HTML 元素，并把它的内容";
+</script>
+<br/><br/><br/><br/><br/><br/><br/>
+<!--
+JavaScript 由 web 浏览器来执行。在这种情况下，浏览器将访问 id="demo" 的 HTML 元素，并把它的内容（innerHTML）替换为 "My First JavaScript"。
+-->
+
+
+
+
+
+
+
+
+<!--
+写到文档输出
+
+下面的例子直接把 <p> 元素写到 HTML 文档输出中：
+
+实例:
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My First Web Page</h1>
+<script>
+document.write("<p>My First JavaScript</p>");
+</script>
+</body>
+</html>
+-->
+<hr/>
+<h1>My First Web Page</h1>
+<script>
+    document.write("<p>My First JavaScript</p>");
+</script>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+警告:
+
+请使用 document.write() 仅仅向文档输出写内容。
+如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖：
+
+实例:
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My First Web Page</h1>
+<p>My First Paragraph.</p>
+<button onclick="myFunction()">点击这里</button>
+<script>
+function myFunction()
+{
+document.write("糟糕！文档消失了。");
+}
+</script>
+</body>
+</html>
+-->
+<hr/>
+<h1>My First Web Page</h1>
+<p>My First Paragraph.</p>
+<button onclick="myFunction2()">点击这里</button>
+<script>
+    function myFunction2()
+    {
+        document.write("糟糕！文档消失了。（如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖）");
+    }
+</script>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+<!--Windows 8 中的 JavaScript
+
+提示：微软支持通过 JavaScript 创建 Windows 8 app。
+
+对于因特网和视窗操作系统，JavaScript 都意味着未来。
+-->
+
+
+
+
+
+
+
+</body>
+</html>
