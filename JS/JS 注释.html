@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 注释</title>
+</head>
+<body>
+
+<!--JavaScript 注释可用于提高代码的可读性。-->
+
+<!--
+JavaScript 注释
+
+JavaScript 不会执行注释。
+我们可以添加注释来对 JavaScript 进行解释，或者提高代码的可读性。
+单行注释以 // 开头。
+
+例子:
+下面的例子使用单行注释来解释代码：
+
+// 输出标题：
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+// 输出段落：
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+-->
+<hr/>
+<h1 id="myH11"></h1>
+<p id="myP1"></p>
+<script>
+    // 输出标题：
+    document.getElementById("myH11").innerHTML="Welcome to my Homepage";
+    // 输出段落：
+    document.getElementById("myP1").innerHTML="This is my first paragraph.";
+</script>
+<p><b>注释：</b>注释不会被执行。</p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+JavaScript 多行注释
+
+多行注释以 /* 开始，以 */ 结尾。
+下面的例子使用多行注释来解释代码：
+
+例子:
+
+/*
+下面的这些代码会输出
+一个标题和一个段落
+并将代表主页的开始
+*/
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+-->
+<hr/>
+<h1 id="myH12"></h1>
+<p id="myP2"></p>
+<script>
+    /*
+     下面的这些代码会输出
+     一个标题和一个段落
+     并将代表主页的开始
+     */
+    document.getElementById("myH12").innerHTML="Welcome to my Homepage";
+    document.getElementById("myP2").innerHTML="This is my first paragraph.";
+</script>
+<p><b>注释：</b>注释块不会被执行。</p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+使用注释来阻止执行
+
+例子 1:
+
+在下面的例子中，注释用于阻止其中一条代码行的执行（可用于调试）：
+
+//document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+-->
+<hr/>
+<h1 id="myH13"></h1>
+<p id="myP3"></p>
+<script>
+    //document.getElementById("myH13").innerHTML="Welcome to my Homepage";
+    document.getElementById("myP3").innerHTML="This is my first paragraph.";
+</script>
+<p><b>注释：</b>注释不会被执行。</p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+例子 2
+在下面的例子中，注释用于阻止代码块的执行（可用于调试）：
+/*
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+*/
+-->
+<hr/>
+<h1 id="myH14"></h1>
+<p id="myP4"></p>
+<script>
+    /*
+     document.getElementById("myH14").innerHTML="Welcome to my Homepage";
+     document.getElementById("myP4").innerHTML="This is my first paragraph.";
+     */
+</script>
+<p><b>注释：</b>注释块不会被执行。</p>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+在行末使用注释
+
+在下面的例子中，我们把注释放到代码行的结尾处：
+
+例子:
+
+var x=5;    // 声明 x 并把 5 赋值给它
+var y=x+2;  // 声明 y 并把 x+2 赋值给它
+-->
+<hr/>
+<p id="myP5"></p>
+<script>
+    var x=5;   // 声明 x 并把 5 赋值给它
+    var y=x+2; // 声明 y 并把 x+2 赋值给它
+    document.getElementById("myP5").innerHTML=y // 把 y 的值写到 myP
+</script>
+<p><b>注释：</b>注释不会被执行。</p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
