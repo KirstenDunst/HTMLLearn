@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 对象</title>
+</head>
+<body>
+
+<!--JavaScript 中的所有事物都是对象：字符串、数字、数组、日期，等等。
+在 JavaScript 中，对象是拥有属性和方法的数据。-->
+
+
+
+
+<!--
+属性和方法
+
+属性是与对象相关的值。
+方法是能够在对象上执行的动作。
+举例：汽车就是现实生活中的对象。
+
+汽车的属性：
+car.name=Fiat
+
+car.model=500
+
+car.weight=850kg
+
+car.color=white
+
+汽车的方法：
+car.start()
+
+car.drive()
+
+car.brake()
+
+汽车的属性包括名称、型号、重量、颜色等。
+所有汽车都有这些属性，但是每款车的属性都不尽相同。
+汽车的方法可以是启动、驾驶、刹车等。
+所有汽车都拥有这些方法，但是它们被执行的时间都不尽相同。
+-->
+
+
+
+
+
+
+
+
+
+<!--
+JavaScript 中的对象
+
+在 JavaScript 中，对象是数据（变量），拥有属性和方法。
+当您像这样声明一个 JavaScript 变量时：
+
+var txt = "Hello";
+
+您实际上已经创建了一个 JavaScript 字符串对象。字符串对象拥有内建的属性 length。对于上面的字符串来说，length 的值是 5。字符串对象同时
+拥有若干个内建的方法。
+
+属性：
+txt.length=5
+
+方法：
+txt.indexOf()
+
+txt.replace()
+
+txt.search()
+
+提示：在面向对象的语言中，属性和方法常被称为对象的成员。
+在本教程稍后的章节中，您将学到有关字符串对象的更多属性和方法。
+-->
+
+
+
+
+
+
+
+<!--
+创建 JavaScript 对象
+
+JavaScript 中的几乎所有事务都是对象：字符串、数字、数组、日期、函数，等等。
+你也可以创建自己的对象。
+本例创建名为 "person" 的对象，并为其添加了四个属性：
+
+
+实例:
+
+person=new Object();
+person.firstname="Bill";
+person.lastname="Gates";
+person.age=56;
+person.eyecolor="blue";
+-->
+<hr/>
+<script>
+    person2 = new Object();
+    person2.firstname = "Bill";
+    person2.lastname = "Gates";
+    person2.age = 56;
+    person2.eyecolor = "blue";
+    document.write(person2.firstname + "is" + person2.age + "years old.");
+</script>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!--创建新 JavaScript 对象有很多不同的方法，并且您还可以向已存在的对象添加属性和方法。
+您将在本教程稍后的章节学到更多相关的内容。-->
+
+
+
+
+
+
+
+<!--
+访问对象的属性
+
+访问对象属性的语法是：
+
+objectName.propertyName
+
+本例使用 String 对象的 length 属性来查找字符串的长度：
+
+var message="Hello World!";
+var x=message.length;
+
+在以上代码执行后，x 的值是：
+
+12
+-->
+
+
+
+
+
+
+
+
+
+<!--
+访问对象的方法
+
+您可以通过下面的语法调用方法：
+
+objectName.methodName()
+
+这个例子使用 String 对象的 toUpperCase() 方法来把文本转换为大写：
+
+var message="Hello world!";
+var x=message.toUpperCase();
+
+在以上代码执行后，x 的值是：
+
+HELLO WORLD!
+
+-->
+
+<!--您知道吗？
+提示：在面向对象的语言中，使用 camel-case 标记法的函数是很常见的。您会经常看到 someMethod() 这样的函数名，而不是 some_method()。
+-->
+
+
+
+
+
+
+
+<!--
+
+如需更多有关 JavaScript 对象的知识，请阅读 JavaScript 高级教程中的相关内容：
+http://www.w3school.com.cn/js/pro_js_object_oriented.asp
+
+ECMAScript 面向对象技术
+本节简要介绍了面向对象技术的术语、面向对象语言的要求以及对象的构成。
+
+ECMAScript 对象应用
+本节讲解了如何声明和实例化对象，如何引用和废除对象，以及绑定的概念。
+
+ECMAScript 对象类型
+本节介绍了 ECMAScript 的三种类型：本地对象、内置对象和宿主对象，并提供了指向相关参考手册的链接。
+
+ECMAScript 对象作用域
+本节讲解了 ECMAScript 作用域以及 this 关键字。
+
+ECMAScript 定义类或对象
+本节详细讲解了创建 ECMAScript 对象或类的各种方式。
+
+ECMAScript 修改对象
+本节讲解了如何通过创建新方法或重定义已有方法来修改对象。
+-->
+
+
+
+</body>
+</html>
