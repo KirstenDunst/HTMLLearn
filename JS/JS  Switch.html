@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Switch</title>
+</head>
+<body>
+
+<!--switch 语句用于基于不同的条件来执行不同的动作。-->
+
+
+
+<!--
+JavaScript Switch 语句
+
+请使用 switch 语句来选择要执行的多个代码块之一。
+
+语法:
+
+switch(n)
+{
+case 1:
+  执行代码块 1
+  break;
+case 2:
+  执行代码块 2
+  break;
+default:
+  n 与 case 1 和 case 2 不同时执行的代码
+}
+
+工作原理：首先设置表达式 n（通常是一个变量）。随后表达式的值会与结构中的每个 case 的值做比较。如果存在匹配，则与该 case 关联的代码块会
+被执行。请使用 break 来阻止代码自动地向下一个 case 运行。
+
+
+实例:
+显示今日的周名称。请注意 Sunday=0, Monday=1, Tuesday=2, 等等：
+
+var day=new Date().getDay();
+switch (day)
+{
+case 0:
+  x="Today it's Sunday";
+  break;
+case 1:
+  x="Today it's Monday";
+  break;
+case 2:
+  x="Today it's Tuesday";
+  break;
+case 3:
+  x="Today it's Wednesday";
+  break;
+case 4:
+  x="Today it's Thursday";
+  break;
+case 5:
+  x="Today it's Friday";
+  break;
+case 6:
+  x="Today it's Saturday";
+  break;
+}
+
+x 的结果：
+
+Today it's Monday
+
+-->
+<p>点击下面的按钮来显示今天是周几：</p>
+<button onclick="myFunction1()">点击这里</button>
+<p id="demo1"></p>
+<script>
+    function myFunction1() {
+        var x;
+        var d = new Date().getDay();
+        switch (d){
+            case 0:
+                x = "Today it is Sunday";
+                break;
+            case 1:
+                x = "Today it is Monday";
+                break;
+            case 2:
+                x = "Today it is Tuesday";
+                break;
+            case 3:
+                x = "Today it is Wednesday";
+                break;
+            case 4:
+                x = "Today it is Thursday";
+                break;
+            case 5:
+                x = "Today it is Friday";
+                break;
+            case 6:
+                x = "Today it is Saturday";
+                break;
+        }
+        document.getElementById("demo1").innerHTML = x;
+    }
+</script>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+default 关键词
+
+请使用 default 关键词来规定匹配不存在时做的事情：
+
+实例:
+如果今天不是周六或周日，则会输出默认的消息：
+
+var day=new Date().getDay();
+switch (day)
+{
+case 6:
+  x="Today it's Saturday";
+  break;
+case 0:
+  x="Today it's Sunday";
+  break;
+default:
+  x="Looking forward to the Weekend";
+}
+
+x 的结果：
+Looking forward to the Weekend
+
+-->
+<hr/>
+<p>点击下面的按钮，会显示出基于今日日期的消息：</p>
+<button onclick="myFunction2()">点击这里</button>
+<p id="demo2"></p>
+<script>
+    function myFunction2()
+    {
+        var x;
+        var d=new Date().getDay();
+        switch (d)
+        {
+            case 6:
+                x="Today it's Saturday";
+                break;
+            case 0:
+                x="Today it's Sunday";
+                break;
+            default:
+                x="Looking forward to the Weekend";
+        }
+        document.getElementById("demo2").innerHTML=x;
+    }
+</script>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!--如需更多有关 JavaScript Switch 语句的知识，请阅读 JavaScript 高级教程中的相关内容：
+http://www.w3school.com.cn/js/pro_js_statements_switch.asp
+
+ECMAScript switch 语句
+switch 语句是 if 语句的兄弟语句。本节介绍了 switch 语句的用法，以及与 Java 中的 switch 语句的不同。
+-->
+
+
+
+
+
+
+</body>
+</html>
