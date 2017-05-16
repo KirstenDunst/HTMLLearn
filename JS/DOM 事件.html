@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 事件</title>
+</head>
+<body onload="checkCookies()">
+
+<!--HTML DOM 使 JavaScript 有能力对 HTML 事件做出反应。-->
+
+
+
+
+
+
+
+<!--
+对事件做出反应
+
+我们可以在事件发生时执行 JavaScript，比如当用户在 HTML 元素上点击时。
+如需在用户点击某个元素时执行代码，请向一个 HTML 事件属性添加 JavaScript 代码：
+
+onclick=JavaScript
+
+HTML 事件的例子：
+
+1.当用户点击鼠标时
+2.当网页已加载时
+3.当图像已加载时
+4.当鼠标移动到元素上时
+5.当输入字段被改变时
+6.当提交 HTML 表单时
+7.当用户触发按键时
+
+例子 1
+在本例中，当用户在 <h1> 元素上点击时，会改变其内容：
+
+<h1 onclick="this.innerHTML='谢谢!'">请点击该文本</h1>
+-->
+<hr/>
+<h1 onclick="this.innerHTML = '谢谢！'">请点击该文本</h1>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+例子 2
+
+本例从事件处理器调用一个函数：
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function changetext(id)
+{
+id.innerHTML="谢谢!";
+}
+</script>
+</head>
+<body>
+<h1 onclick="changetext(this)">请点击该文本</h1>
+</body>
+</html>
+
+-->
+<hr/>
+<script>
+    function changetext(id) {
+        id.innerHTML = "谢谢！";
+    }
+</script>
+
+<h1 onclick="changetext(this)">请点击这个文本</h1>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+HTML 事件属性
+
+如需向 HTML 元素分配 事件，您可以使用事件属性。
+
+实例:
+
+向 button 元素分配 onclick 事件：
+
+<button onclick="displayDate()">点击这里</button>
+
+在上面的例子中，名为 displayDate 的函数将在按钮被点击时执行。
+-->
+<hr/>
+<p>点击这个按钮可以执行<em>displayDate</em>函数。</p>
+<button onclick="displayDate()">点击这里</button>
+<script>
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
+<p id="demo"></p>
+<br/><Br/><br/><Br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+<!--
+使用 HTML DOM 来分配事件
+
+HTML DOM 允许您通过使用 JavaScript 来向 HTML 元素分配事件：
+
+实例:
+向 button 元素分配 onclick 事件：
+
+<script>
+document.getElementById("myBtn").onclick=function(){displayDate()};
+</script>
+
+在上面的例子中，名为 displayDate 的函数被分配给 id=myButn" 的 HTML 元素。
+当按钮被点击时，会执行该函数。
+-->
+<hr/>
+<p>点击按钮可以执行<em>displayDate()</em>函数。</p>
+<button id="myBtn">点击这里</button>
+<script>
+    document.getElementById("myBtn").onclick = function () { displayDate1() };
+    function displayDate1() {
+        document.getElementById("demo1").innerHTML = Date();
+    }
+</script>
+<p id="demo1"></p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+onload 和 onunload 事件
+onload 和 onunload 事件会在用户进入或离开页面时被触发。
+onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本。
+onload 和 onunload 事件可用于处理 cookie。
+实例
+<body onload="checkCookies()">
+-->
+<script>
+    function checkCookies() {
+        if (navigator.cookieEnabled == true) {
+            alert("已启用 cookie")
+        }else {
+            alert("未启用 coolie")
+        }
+    }
+</script>
+<p>提示框会告诉你，浏览器是否已启用 cookie。</p>
+<br/><Br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+<!--
+onchange 事件
+
+onchange 事件常结合对输入字段的验证来使用。
+下面是一个如何使用 onchange 的例子。当用户改变输入字段的内容时，会调用 upperCase() 函数。
+
+实例:
+<input type="text" id="fname" onchange="upperCase()">
+-->
+<hr/>
+<script>
+    function myFunction11() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+请输入英文字符：<input type="text" id="fname" onchange="myFunction11()">
+<p>当您离开输入字段时，会触发将输入文本转换为大写的函数。</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+onmouseover 和 onmouseout 事件
+onmouseover 和 onmouseout 事件可用于在用户的鼠标移至 HTML 元素上方或移出元素时触发函数。
+实例
+一个简单的 onmouseover-onmouseout 实例：
+-->
+<hr/>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: green;width: 120px;
+height: 20px; padding: 40px;color: #ffffff;">把鼠标移到上面</div>
+<script>
+    function mOver(obj) {
+        obj.innerHTML = "谢谢"
+    }
+    function mOut(obj) {
+        obj.innerHTML = "把鼠标移到上面"
+    }
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+onmousedown、onmouseup 以及 onclick 事件
+onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。首先当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，
+会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件。
+
+实例:
+一个简单的 onmousedown-onmouseup 实例：
+-->
+<hr/>
+<div onmousedown="mDown1(this)" onmouseup="mUp1(this)" style="background-color: green;color: #ffffff;
+width: 90px;height: 20px;padding: 40px;font-size: 12px;">请点击这里</div>
+<script>
+    function mDown1(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "请释放鼠标按钮"
+    }
+    function mUp1(obj) {
+        obj.style.backgroundColor = "green";
+        obj.innerHTML = "请按下鼠标按钮"
+    }
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--onmousedown 和 onmouseup
+当用户按下鼠标按钮时，更换一幅图像。-->
+<hr/>
+<script>
+    function lighton() {
+        document.getElementById("myimage").src = "http://www.w3school.com.cn/i/eg_bulbon.gif";
+    }
+    function lightoff() {
+        document.getElementById("myimage").src = "http://www.w3school.com.cn/i/eg_bulboff.gif";
+    }
+</script>
+<img src="http://www.w3school.com.cn/i/eg_bulboff.gif" id="myimage" onmousedown="lighton()" onmouseup="lightoff()">
+<p>按住鼠标不放可以点亮这盏灯！</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--onload
+当页面完成加载时，显示一个提示框。-->
+<hr/>
+<script>
+    function mymessage() {
+        alert("这段消息由 onload 事件触发");
+    }
+</script>
+<br/><br/>
+<!--<body onload="mymessage()">-->
+
+
+
+
+
+
+
+<!--
+onfocus
+当输入字段获得焦点时，改变其背景色。
+-->
+<hr/>
+<script>
+    function myFunction15(x) {
+        x.style.backgroundColor = "yellow";
+    }
+</script>
+请输入英文字符：<input type="text" onfocus="myFunction15(this)">
+<p>当输入字段获得焦点时，会触发改变背景颜色的函数。</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+鼠标事件
+当指针移动到元素上方时，改变其颜色；当指针移出文本后，会再次改变其颜色。
+-->
+<hr/>
+<h1 onmousemove="style.color = 'red'" onmouseout = "style.color = 'blue'">请把鼠标移到这段文本上</h1>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+HTML DOM Event 对象参考手册
+如需所有 HTML DOM 事件的完整列表，请参阅 W3School 提供的 HTML DOM Event 对象参考手册。
+(http://www.w3school.com.cn/jsref/dom_obj_event.asp)
+-->
+
+
+
+
+
+</body>
+</html>
