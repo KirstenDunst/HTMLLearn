@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM CSS</title>
+</head>
+<body>
+
+<!--
+HTML DOM 允许 JavaScript 改变 HTML 元素的样式。
+-->
+
+
+
+
+
+
+
+
+<!--
+改变 HTML 样式
+
+如需改变 HTML 元素的样式，请使用这个语法：
+
+document.getElementById(id).style.property=new style
+
+
+例子 1
+下面的例子会改变 <p> 元素的样式：
+
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color="blue";
+</script>
+
+-->
+<hr/>
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+<script>
+    document.getElementById("p2").style.color = "blue";
+    document.getElementById("p2").style.fontFamily = "Arial";
+    document.getElementById("p2").style.fontSize = "larger";
+</script>
+<p>上面的段落已被一段脚本修改。</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+例子 2
+
+本例改变了 id="id1" 的 HTML 元素的样式，当用户点击按钮时：
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" onclick="document.getElementById('id1').style.color='red'">
+点击这里
+</button>
+
+-->
+<hr/>
+<h1 id="id1">My Heading 1</h1>
+<button type="button" onclick="document.getElementById('id1').style.color = 'red'">
+    点击这里！
+</button>
+<br/><br/><br/><br/><Br/><br/>
+
+
+
+
+
+
+
+<!--
+更多实例:
+Visibility
+如何使元素不可见。您希望元素显示或消失吗？
+
+
+HTML DOM Style 对象参考手册
+
+如需完整的 HTML DOM Style 对象属性，请参阅我们的 HTML DOM Style 对象参考手册。
+(http://www.w3school.com.cn/jsref/dom_obj_style.asp)
+-->
+<hr/>
+<p id="p3">这是一段文本</p>
+<input type="button" value="隐藏文本" onclick="document.getElementById('p3').style.visibility = 'hidden'">
+<input type="button" value="显示文本" onclick="document.getElementById('p3').style.visibility = 'visible'">
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+</body>
+</html>
