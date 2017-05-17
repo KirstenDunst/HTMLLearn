@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 字符串</title>
+</head>
+<body>
+
+<!--String 对象用于处理已有的字符块。-->
+
+
+
+
+
+<!--JavaScript String（字符串）对象 实例-->
+
+<!--计算字符串的长度
+如何使用长度属性来计算字符串的长度。-->
+<hr/>
+<script type="text/javascript">
+    var  txt = "Hello World!";
+    document.write(txt.length);
+</script>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--为字符串添加样式
+如何为字符串添加样式。-->
+<hr/>
+<script type="text/javascript">
+    var txt="Hello World!";
+
+    document.write("<p>Big: " + txt.big() + "</p>");
+    document.write("<p>Small: " + txt.small() + "</p>");
+
+    document.write("<p>Bold: " + txt.bold() + "</p>");
+    document.write("<p>Italic: " + txt.italics() + "</p>");
+
+    document.write("<p>Blink: " + txt.blink() + " (does not work in IE)</p>");
+    document.write("<p>Fixed: " + txt.fixed() + "</p>");
+    document.write("<p>Strike: " + txt.strike() + "</p>");
+
+    document.write("<p>Fontcolor: " + txt.fontcolor("Red") + "</p>");
+    document.write("<p>Fontsize: " + txt.fontsize(16) + "</p>");
+
+    document.write("<p>Lowercase: " + txt.toLowerCase() + "</p>");
+    document.write("<p>Uppercase: " + txt.toUpperCase() + "</p>");
+
+    document.write("<p>Subscript: " + txt.sub() + "</p>");
+    document.write("<p>Superscript: " + txt.sup() + "</p>");
+
+    document.write("<p>Link: " + txt.link("http://www.w3school.com.cn") + "</p>");
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--indexOf() 方法
+如何使用 indexOf() 来定位字符串中某一个指定的字符首次出现的位置。-->
+<hr/>
+<script>
+    var str = "Hello world!";
+    document.write(str.indexOf("Hello") + "<br/>");
+    document.write(str.indexOf("World") + "<br/>");
+    document.write(str.indexOf("world"));
+</script>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--match() 方法
+如何使用 match() 来查找字符串中特定的字符，并且如果找到的话，则返回这个字符。-->
+<hr/>
+<script>
+    var str = "Hello world!";
+    document.write(str.match("world") + "<br/>");
+    document.write(str.match("World") + "<br/>");
+    document.write(str.match("worlld") + "<br/>");
+    document.write(str.match("world!"));
+</script>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--如何替换字符串中的字符 - replace()
+如何使用 replace() 方法在字符串中用某些字符替换另一些字符。-->
+<hr/>
+<script>
+    var str = "Visit Microsoft!";
+    document.write(str.replace(/Microsoft/,"W3School"));
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+完整的 String 对象参考手册
+请查看我们的 JavaScript String 对象参考手册(http://www.w3school.com.cn/jsref/jsref_obj_string.asp)，其中提供了可以与字符串对象
+一同使用的所有的属性和方法。
+这个手册包含的关于每个属性和方法的用法的详细描述和实例。-->
+
+
+
+
+
+
+
+
+
+<!--
+字符串对象
+
+字符串对象用于处理已有的字符块。
+
+例子：
+下面的例子使用字符串对象的长度属性来计算字符串的长度。
+
+var txt="Hello world!"
+document.write(txt.length)
+
+上面的代码输出为：
+
+12
+
+下面的例子使用字符串对象的toUpperCase()方法将字符串转换为大写：
+
+var txt="Hello world!"
+document.write(txt.toUpperCase())
+
+上面的代码输出为：
+
+HELLO WORLD!
+-->
+
+
+
+
+
+
+
+
+
+<!--
+相关页面
+
+JavaScript 高级教程：ECMAScript 类型转换(http://www.w3school.com.cn/js/pro_js_typeconversion.asp)
+
+JavaScript 高级教程：ECMAScript 引用类型(http://www.w3school.com.cn/js/pro_js_referencetypes.asp)
+
+JavaScript 参考手册：String 对象(http://www.w3school.com.cn/jsref/jsref_obj_string.asp)
+
+-->
+
+
+
+
+
+
+
+</body>
+</html>
