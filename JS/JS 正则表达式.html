@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 正则表达式</title>
+</head>
+<body>
+
+
+<!--RegExp 对象用于规定在文本中检索的内容。-->
+
+
+<!--
+什么是 RegExp？
+
+RegExp 是正则表达式的缩写。
+当您检索某个文本时，可以使用一种模式来描述要检索的内容。RegExp 就是这种模式。
+简单的模式可以是一个单独的字符。
+更复杂的模式包括了更多的字符，并可用于解析、格式检查、替换等等。
+您可以规定字符串中的检索位置，以及要检索的字符类型，等等。
+-->
+
+
+
+
+
+
+<!--
+定义 RegExp
+
+RegExp 对象用于存储检索模式。
+通过 new 关键词来定义 RegExp 对象。以下代码定义了名为 patt1 的 RegExp 对象，其模式是 "e"：
+
+var patt1=new RegExp("e");
+
+当您使用该 RegExp 对象在一个字符串中检索时，将寻找的是字符 "e"。
+-->
+
+
+
+
+
+
+
+<!--RegExp 对象的方法
+RegExp 对象有 3 个方法：test()、exec() 以及 compile()。-->
+
+
+
+
+
+
+
+
+<!--
+test()
+
+test() 方法检索字符串中的指定值。返回值是 true 或 false。
+
+例子：
+var patt1=new RegExp("e");
+
+document.write(patt1.test("The best things in life are free"));
+
+由于该字符串中存在字母 "e"，以上代码的输出将是：
+
+true
+-->
+<hr/>
+<script>
+    var patt1 = new RegExp("e");
+    document.write(patt1.test("The best things in life are free"));
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+exec()
+
+exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。
+
+例子 1：
+var patt1=new RegExp("e");
+
+document.write(patt1.exec("The best things in life are free"));
+
+由于该字符串中存在字母 "e"，以上代码的输出将是：
+
+e
+-->
+<hr/>
+<script>
+    var patt2 = new RegExp("e");
+    document.write(patt2.exec("The best things in life are free"));
+</script>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+compile()
+
+compile() 方法用于改变 RegExp。
+compile() 既可以改变检索模式，也可以添加或删除第二个参数。
+
+例子：
+var patt1=new RegExp("e");
+
+document.write(patt1.test("The best things in life are free"));
+
+patt1.compile("d");
+
+document.write(patt1.test("The best things in life are free"));
+
+由于字符串中存在 "e"，而没有 "d"，以上代码的输出是：
+
+truefalse
+-->
+<hr/>
+<script>
+    var patt3 = new RegExp("e");
+    document.write(patt3.test("The best things in life are free"));
+
+    patt3.compile("d");
+
+    document.write(patt3.test("The best things in life are free"));
+</script>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+完整的 RegExp 对象参考手册
+
+如需可与 RegExp 对象一同使用所有属性和方法的完整信息，请访问我们的
+ RegExp 对象参考手册(http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp)。
+
+这个参考手册包含了对 RegExp 对象中每个属性和方法的详细描述，以及使用的例子。
+-->
+
+
+
+
+
+
+
+
+</body>
+</html>
