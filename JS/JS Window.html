@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Window</title>
+</head>
+<body onload="checkCookie()">
+<!------------------------------------------------------JS Window----------------------------------------------------->
+<hr/>
+<p>JS Window</p>
+<!--浏览器对象模型 (BOM) 使 JavaScript 有能力与浏览器“对话”。-->
+
+
+
+
+
+<!--
+浏览器对象模型 (BOM)
+
+浏览器对象模型（Browser Object Model）尚无正式标准。
+由于现代浏览器已经（几乎）实现了 JavaScript 交互性方面的相同方法和属性，因此常被认为是 BOM 的方法和属性。
+-->
+
+
+
+
+
+
+
+<!--
+Window 对象
+
+所有浏览器都支持 window 对象。它表示浏览器窗口。
+所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。
+全局变量是 window 对象的属性。
+全局函数是 window 对象的方法。
+甚至 HTML DOM 的 document 也是 window 对象的属性之一：
+
+window.document.getElementById("header");
+
+与此相同：
+
+document.getElementById("header");
+-->
+
+
+
+
+
+
+<!--
+Window 尺寸
+
+有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）。
+
+对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：
+
+window.innerHeight - 浏览器窗口的内部高度
+window.innerWidth - 浏览器窗口的内部宽度
+
+对于 Internet Explorer 8、7、6、5：
+
+document.documentElement.clientHeight
+document.documentElement.clientWidth
+
+或者
+
+document.body.clientHeight
+document.body.clientWidth
+
+实用的 JavaScript 方案（涵盖所有浏览器）：
+
+实例
+
+var w=window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h=window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+-->
+<p id="demo1"></p>
+<script>
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    x = document.getElementById("demo1");
+    x.innerHTML = "浏览器的内部窗口宽度：" + w + ",高度：" + h + "。";
+</script>
+<br/><br/><br/><br/><br/><br/>
+<!--该例显示浏览器窗口的高度和宽度：（不包括工具栏/滚动条）-->
+
+
+
+
+
+
+<!--
+其他 Window 方法
+
+一些其他方法：
+
+1.window.open() - 打开新窗口
+2.window.close() - 关闭当前窗口
+3.window.moveTo() - 移动当前窗口
+4.window.resizeTo() - 调整当前窗口的尺寸
+
+-->
+
+
+
+
+
+
+<!------------------------------------------------------JS Screen---------------------------------------------------->
+<hr/>
+<p>JS Screen属性</p>
+
+
+
+
+
+
+<!--<p>window.screen 对象包含有关用户屏幕的信息。</p>-->
+
+
+
+
+<!--
+Window Screen
+
+window.screen 对象在编写时可以不使用 window 这个前缀。
+
+一些属性：
+1.screen.availWidth - 可用的屏幕宽度
+2.screen.availHeight - 可用的屏幕高度
+-->
+
+
+
+
+
+
+
+<!--
+Window Screen 可用宽度
+
+screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如窗口任务栏。
+
+实例:
+
+返回您的屏幕的可用宽度：
+
+<script>
+
+document.write("可用宽度：" + screen.availWidth);
+
+</script>
+
+以上代码输出为：
+
+可用宽度：1920
+-->
+<script>
+    document.write("整个屏幕的可用宽度：" + screen.availWidth);
+</script>
+
+
+
+
+
+
+
+<!--
+Window Screen 可用高度
+
+screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏。
+
+实例:
+
+返回您的屏幕的可用高度：
+
+<script>
+
+document.write("可用高度：" + screen.availHeight);
+
+</script>
+
+以上代码输出为：
+
+可用高度：977
+-->
+<script>
+    document.write("屏幕的可用高度：" + screen.availHeight);
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!-----------------------------------------------------JS Location--------------------------------------------------->
+<hr/>
+<p>JS Location</p>
+
+
+<!--window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。-->
+
+
+<!--
+Window Location
+
+window.location 对象在编写时可不使用 window 这个前缀。
+
+一些例子：
+
+1.location.hostname 返回 web 主机的域名
+2.location.pathname 返回当前页面的路径和文件名
+3.location.port 返回 web 主机的端口 （80 或 443）
+4.location.protocol 返回所使用的 web 协议（http:// 或 https://）
+-->
+
+
+
+
+
+
+
+<!--
+Window Location Href
+
+location.href 属性返回当前页面的 URL。
+
+实例:
+
+返回（当前页面的）整个 URL：
+
+<script>
+
+document.write(location.href);
+
+</script>
+
+以上代码输出为：
+
+http://www.w3school.com.cn/js/js_window_location.asp
+-->
+
+
+
+
+
+
+
+
+<!--
+Window Location Pathname
+
+location.pathname 属性返回 URL 的路径名。
+
+实例:
+
+返回当前 URL 的路径名：
+
+<script>
+
+document.write(location.pathname);
+
+</script>
+
+以上代码输出为：
+
+/js/js_window_location.asp
+-->
+
+
+
+
+
+
+
+
+
+<!--
+Window Location Assign
+
+location.assign() 方法加载新的文档。
+
+实例:
+
+加载一个新的文档：
+
+<html>
+<head>
+<script>
+function newDoc()
+  {
+  window.location.assign("http://www.w3school.com.cn")
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="加载新文档" onclick="newDoc()">
+
+</body>
+</html>
+-->
+<script>
+    function newDoc() {
+        window.location.assign("http://www.w3school.com.cn");
+    }
+</script>
+<input type="button" value="加载新文档" onclick="newDoc()">
+<br/><br/><br/><br/><br/>
+
+
+
+<!------------------------------------------------------JS History--------------------------------------------------->
+<hr/>
+<p>JS History</p>
+
+
+<!--window.history 对象包含浏览器的历史。-->
+
+
+
+
+
+<!--
+Window History
+
+window.history 对象在编写时可不使用 window 这个前缀。
+为了保护用户隐私，对 JavaScript 访问该对象的方法做出了限制。
+
+一些方法：
+history.back() - 与在浏览器点击后退按钮相同
+history.forward() - 与在浏览器中点击按钮向前相同
+-->
+
+
+
+
+
+
+
+<!--
+Window History Back
+
+history.back() 方法加载历史列表中的前一个 URL。
+
+这与在浏览器中点击后退按钮是相同的：
+
+实例:
+
+在页面上创建后退按钮：
+<html>
+<head>
+<script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Back" onclick="goBack()">
+
+</body>
+</html>
+
+以上代码输出为：
+
+转到上一页
+
+-->
+
+
+
+
+
+
+<!--
+Window History Forward
+
+history forward() 方法加载历史列表中的下一个 URL。
+这与在浏览器中点击前进按钮是相同的：
+
+实例:
+
+在页面上创建一个向前的按钮：
+
+<html>
+<head>
+<script>
+function goForward()
+  {
+  window.history.forward()
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()">
+
+</body>
+</html>
+
+以上代码输出为：
+
+转到下一页
+
+-->
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+<!-----------------------------------------------------JS Navigator-------------------------------------------------->
+<hr/>
+<p>JS Navigator</p>
+
+
+<!--window.navigator 对象包含有关访问者浏览器的信息。-->
+
+
+<!--
+Window Navigator
+
+window.navigator 对象在编写时可不使用 window 这个前缀。
+
+实例:
+
+<div id="example"></div>
+
+<script>
+
+txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+txt+= "<p>Platform: " + navigator.platform + "</p>";
+txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+document.getElementById("example").innerHTML=txt;
+
+</script>
+
+-->
+<div id="example"></div>
+<script>
+    txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+    txt += "<p>Browser Name: " + navigator.appName + "</p>";
+    txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+    txt += "<p>Browser Enabled: " + navigator.cookieEnabled + "</p>";
+    txt += "<p>Platform: " + navigator.platform + "</p>";
+    txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+    txt += "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+    document.getElementById("example").innerHTML = txt;
+</script>
+<br/><br/><br/><br/><br/>
+
+<!--
+
+警告：来自 navigator 对象的信息具有误导性，不应该被用于检测浏览器版本，这是因为：
+
+navigator 数据可被浏览器使用者更改
+浏览器无法报告晚于浏览器发布的新操作系统
+-->
+
+
+
+
+
+
+
+<!--
+浏览器检测
+
+由于 navigator 可误导浏览器检测，使用对象检测可用来嗅探不同的浏览器。
+
+由于不同的浏览器支持不同的对象，您可以使用对象来检测浏览器。例如，由于只有 Opera 支持属性 "window.opera"，您可以据此识别出 Opera。
+
+例子：if (window.opera) {...some action...}
+-->
+
+
+
+<!----------------------------------------------------JS PopupAlert-------------------------------------------------->
+<hr/>
+<p>JS PopopAlert</p>
+
+<!--可以在 JavaScript 中创建三种消息框：警告框、确认框、提示框。-->
+
+<!--实例：-->
+
+<!--警告框-->
+<script>
+    function disp_alert1() {
+        alert("我是警告框！！");
+    }
+</script>
+<input type="button" onclick="disp_alert1()" value="显示警告框"／>
+<br/><br/><br/>
+
+
+
+
+<!--带有折行的警告框-->
+<script>
+    function disp_alert2() {
+        alert("再次向您问好！在这里，我们向您演示" + '\n' + "如何向警告框添加折行。");
+    }
+</script>
+<input type="button" onclick="disp_alert2()" value="显示折行警告框。"／>
+<br/><br/><br/>
+
+
+
+
+
+<!--确认框-->
+<script>
+    function show_confirm() {
+        var r = confirm("Press a button!");
+        if (r == true){
+            alert("You pressed Ok！");
+        }else {
+            alert("You pressed Cancel!");
+        }
+    }
+</script>
+<input type="button" value="Show a confirm box" onclick="show_confirm()">
+<br/><br/><br/>
+
+
+
+
+
+<!--提示框-->
+<script>
+    function disp_prompt() {
+        var name = prompt("请输入您的名字","Bill Gates");
+        if (name != null && name != ""){
+            document.write("你好！" + name + " 今天过得怎么样？");
+        }
+    }
+</script>
+<input type="button" onclick="disp_prompt()" value="显示提示框">
+<br/><br/><br/><br/>
+
+
+
+
+
+
+<!--
+警告框
+
+警告框经常用于确保用户可以得到某些信息。
+当警告框出现后，用户需要点击确定按钮才能继续进行操作。
+
+语法：
+alert("文本")
+
+-->
+
+
+
+
+
+
+<!--
+确认框
+
+确认框用于使用户可以验证或者接受某些信息。
+当确认框出现后，用户需要点击确定或者取消按钮才能继续进行操作。
+如果用户点击确认，那么返回值为 true。如果用户点击取消，那么返回值为 false。
+
+语法：
+confirm("文本")
+-->
+
+
+
+
+
+
+<!--
+提示框
+
+提示框经常用于提示用户在进入页面前输入某个值。
+当提示框出现后，用户需要输入某个值，然后点击确认或取消按钮才能继续操纵。
+如果用户点击确认，那么返回值为输入的值。如果用户点击取消，那么返回值为 null。
+
+语法：
+prompt("文本","默认值")
+-->
+
+
+
+<!------------------------------------------------------JS Timing---------------------------------------------------->
+<hr/>
+<p>JS Timing</p>
+
+<!--通过使用 JavaScript，我们有能力做到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件。-->
+
+
+
+<!--简单的计时
+单击本例中的按钮后，会在 5 秒后弹出一个警告框。-->
+<script>
+    function timedMsg() {
+        var t = setTimeout("alert('5秒！')",5000)
+    }
+</script>
+<form>
+    <input type="button" value="显示定时的警告框" onclick="timedMsg()">
+</form>
+<p>请点击上面的按钮。警告框会在 5 秒后显示。</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--另一个简单的计时
+本例中的程序会执行 2 秒、4 秒和 6 秒的计时。-->
+<script>
+    function timeText() {
+        var t1 = setTimeout("document.getElementById('txt').value = '2秒'",2000);
+        var t2 = setTimeout("document.getElementById('txt').value = '4秒'",4000);
+        var t3 = setTimeout("document.getElementById('txt').value = '6秒'",6000);
+    }
+</script>
+<form>
+    <input type="button" value="显示计时的文本" onclick="timeText()">
+    <input type="text" id="txt">
+</form>
+<p>点击上面的按钮，输入框会显示失去的时间（2、4、6 秒）。</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--在一个无穷循环中的计时事件
+在本例中，单击开始计时按钮后，程序开始从 0 以秒计时。-->
+<script>
+    var c = 0;
+    var t;
+    function timedCount() {
+        document.getElementById('txt1').value = c;
+        c = c + 1;
+        t = setTimeout("timedCount()",1000);
+    }
+</script>
+<form>
+    <input type="button" value="开始计时！" onclick="timedCount()">
+    <input type="text" id="txt1">
+</form>
+<p>请点击上面的按钮。输入框会从 0 开始一直进行计时。</p>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+<!--带有停止按钮的无穷循环中的计时事件
+在本例中，点击计数按钮后根据用户输入的数值开始倒计时，点击停止按钮停止计时。-->
+<script>
+    var c = 0;
+    var t;
+    function timedCount1() {
+        document.getElementById('txt2').value = c;
+        c = c + 1;
+        t = setTimeout("timedCount1()",1000);
+    }
+    function stopCount() {
+        c = 0;
+        setTimeout("document.getElementById('txt2').value = 0",0);
+        clearTimeout(t);
+    }
+</script>
+<form>
+    <input type="button" value="开始计时！" onclick="timedCount1()">
+    <input type="text" id="txt2">
+    <input type="button" value="停止计时！" onclick="stopCount()">
+</form>
+<p>请点击上面的"开始计时"按钮来启动计时器。输入框会一直计时，从 0 开始。点击"停止计时"按钮可以终止计时，并将重制为0。</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+<!--使用计时事件制作的钟表
+一个 JavaScript 小时钟-->
+<script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+//        add a zero in front of number<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt3').innerHTML = h + ":" + m + ":"+ s;
+        t = setTimeout('startTime()',500);
+    }
+    function checkTime(i) {
+        if (i<10) {
+            i = "0" + i;
+        }else {
+            return i;
+        }
+    }
+</script>
+<!--<body onload="startTime()">-->
+<div id="txt3"></div>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!--
+JavaScript 计时事件
+
+通过使用 JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件。
+
+在 JavaScritp 中使用计时事件是很容易的，两个关键方法是:
+
+setTimeout()
+未来的某时执行代码
+
+clearTimeout()
+取消setTimeout()
+-->
+
+
+
+
+
+
+
+<!--
+setTimeout()
+
+语法
+
+var t=setTimeout("javascript语句",毫秒)
+setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。
+setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 "alert('5 seconds!')"，或者对函数的调用，诸如 alertMsg()"。
+第二个参数指示从当前起多少毫秒后执行第一个参数。
+提示：1000 毫秒等于一秒。
+
+实例:
+
+当下面这个例子中的按钮被点击时，一个提示框会在5秒中后弹出。
+
+<html>
+<head>
+<script type="text/javascript">
+function timedMsg()
+ {
+ var t=setTimeout("alert('5 seconds!')",5000)
+ }
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="Display timed alertbox!" onClick="timedMsg()">
+</form>
+</body>
+</html>
+
+实例 - 无穷循环
+
+要创建一个运行于无穷循环中的计时器，我们需要编写一个函数来调用其自身。在下面的例子中，当按钮被点击后，输入域便从 0 开始计数。
+
+<html>
+
+<head>
+<script type="text/javascript">
+var c=0
+var t
+function timedCount()
+ {
+ document.getElementById('txt').value=c
+ c=c+1
+ t=setTimeout("timedCount()",1000)
+ }
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="Start count!" onClick="timedCount()">
+<input type="text" id="txt">
+</form>
+</body>
+
+</html>
+
+-->
+
+
+
+
+
+
+
+<!--
+clearTimeout()
+
+语法:
+
+clearTimeout(setTimeout_variable)
+
+实例
+下面的例子和上面的无穷循环的例子相似。唯一的不同是，现在我们添加了一个 "Stop Count!" 按钮来停止这个计数器：
+
+<html>
+
+<head>
+<script type="text/javascript">
+var c=0
+var t
+
+function timedCount()
+ {
+ document.getElementById('txt').value=c
+ c=c+1
+ t=setTimeout("timedCount()",1000)
+ }
+
+function stopCount()
+ {
+ clearTimeout(t)
+ }
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="Start count!" onClick="timedCount()">
+<input type="text" id="txt">
+<input type="button" value="Stop count!" onClick="stopCount()">
+</form>
+</body>
+
+</html>
+-->
+
+
+<!------------------------------------------------------JS Cookies--------------------------------------------------->
+<hr/>
+<p>JS Cookies</p>
+
+<!--cookie 用来识别用户。-->
+
+
+<!--
+创建一个欢迎 cookie
+利用用户在提示框中输入的数据创建一个 JavaScript Cookie，当该用户再次访问该页面时，根据 cookie 中的信息发出欢迎信息。-->
+<script>
+    function getCookie(c_name) {
+        if (document.cookie.length>0) {
+            c_start = document.cookie.indexOf(c_name + "=");
+            if (c_start != -1){
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";",c_start);
+                if (c_end == -1) {
+                    c_end = document.cookie.length;
+                }
+                return unescape(document.cookie.substring(c_start,c_end));
+            }
+        }
+        return "";
+    }
+    function setCookie(c_name,value,expiredays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDay() + expiredays);
+        document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "":"; expires = " + exdate.toGMTString())
+    }
+    function checkCookie() {
+        username = getCookie('username');
+        if (username != null && username != "") {
+            alert('Welecome again' + username + '!');
+        }else {
+            username = prompt('Please enter your name:',"");
+            if (username != null && username != "") {
+                setCookie('username',username,365);
+            }
+        }
+    }
+</script>
+<!--<body onLoad="checkCookie()">-->
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+什么是cookie?
+
+cookie 是存储于访问者的计算机中的变量。每当同一台计算机通过浏览器请求某个页面时，就会发送这个 cookie。你可以使用 JavaScript 来创建和
+取回 cookie 的值。
+
+有关cookie的例子：
+
+名字 cookie
+当访问者首次访问页面时，他或她也许会填写他/她们的名字。名字会存储于 cookie 中。当访问者再次访问网站时，他们会收到类似 "Welcome John Doe!"
+ 的欢迎词。而名字则是从 cookie 中取回的。
+
+密码 cookie
+当访问者首次访问页面时，他或她也许会填写他/她们的密码。密码也可被存储于 cookie 中。当他们再次访问网站时，密码就会从 cookie 中取回。
+
+日期 cookie
+当访问者首次访问你的网站时，当前的日期可存储于 cookie 中。当他们再次访问网站时，他们会收到类似这样的一条消息："Your last visit was on
+Tuesday August 11, 2005!"。日期也是从 cookie 中取回的。
+
+-->
+
+
+
+
+
+
+
+
+<!--
+创建和存储 cookie
+
+在这个例子中我们要创建一个存储访问者名字的 cookie。当访问者首次访问网站时，他们会被要求填写姓名。名字会存储于 cookie 中。当访问者再次访问
+网站时，他们就会收到欢迎词。
+
+首先，我们会创建一个可在 cookie 变量中存储访问者姓名的函数：
+
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+}
+
+上面这个函数中的参数存有 cookie 的名称、值以及过期天数。
+在上面的函数中，我们首先将天数转换为有效的日期，然后，我们将 cookie 名称、值及其过期日期存入 document.cookie 对象。
+之后，我们要创建另一个函数来检查是否已设置 cookie：
+
+function getCookie(c_name)
+{
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=")
+  if (c_start!=-1)
+    {
+    c_start=c_start + c_name.length+1
+    c_end=document.cookie.indexOf(";",c_start)
+    if (c_end==-1) c_end=document.cookie.length
+    return unescape(document.cookie.substring(c_start,c_end))
+    }
+  }
+return ""
+}
+
+上面的函数首先会检查 document.cookie 对象中是否存有 cookie。假如 document.cookie 对象存有某些 cookie，那么会继续检查我们指定的
+cookie 是否已储存。如果找到了我们要的 cookie，就返回值，否则返回空字符串。
+
+最后，我们要创建一个函数，这个函数的作用是：如果 cookie 已设置，则显示欢迎词，否则显示提示框来要求用户输入名字。
+
+function checkCookie()
+{
+username=getCookie('username')
+if (username!=null && username!="")
+  {alert('Welcome again '+username+'!')}
+else
+  {
+  username=prompt('Please enter your name:',"")
+  if (username!=null && username!="")
+    {
+    setCookie('username',username,365)
+    }
+  }
+}
+
+这是所有的代码：
+
+<html>
+<head>
+<script type="text/javascript">
+function getCookie(c_name)
+{
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=")
+  if (c_start!=-1)
+    {
+    c_start=c_start + c_name.length+1
+    c_end=document.cookie.indexOf(";",c_start)
+    if (c_end==-1) c_end=document.cookie.length
+    return unescape(document.cookie.substring(c_start,c_end))
+    }
+  }
+return ""
+}
+
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+}
+
+function checkCookie()
+{
+username=getCookie('username')
+if (username!=null && username!="")
+  {alert('Welcome again '+username+'!')}
+else
+  {
+  username=prompt('Please enter your name:',"")
+  if (username!=null && username!="")
+    {
+    setCookie('username',username,365)
+    }
+  }
+}
+</script>
+</head>
+
+<body onLoad="checkCookie()">
+</body>
+</html>
+-->
+
+
+
+
+
+
+
+</body>
+</html>
