@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 内容</title>
+</head>
+<body>
+
+<!--通过 HTML DOM，JavaScript 能够访问 HTML 文档中的每个元素。-->
+
+
+<!--
+改变 HTML 内容
+
+改变元素内容的最简单的方法是使用 innerHTML 属性。
+下面的例子更改 <p> 元素的 HTML 内容：
+
+实例:
+
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML="New text!";
+</script>
+
+</body>
+</html>
+-->
+<hr/>
+<p id="p1">Hello World!</p>
+<script>
+    document.getElementById("p1").innerHTML = "New text!";
+</script>
+<p>上面的段落被一段脚本改变了。</p>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+改变 HTML 样式
+
+通过 HTML DOM，您能够访问 HTML 对象的样式对象。
+下面的例子更改段落的 HTML 样式：
+
+实例:
+
+<html>
+
+<body>
+<p id="p2">Hello world!</p>
+
+<script>
+document.getElementById("p2").style.color="blue";
+</script>
+
+</body>
+</html>
+-->
+<hr/>
+<p id="p2">Hello World!</p>
+<p id="p3">Hello World!</p>
+<script>
+    document.getElementById("p3").style.color = "blue";
+    document.getElementById("p3").style.fontFamily = "Arial";
+    document.getElementById("p3").style.fontSize = "larger";
+</script>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+使用事件
+
+HTML DOM 允许您在事件发生时执行代码。
+当 HTML 元素”有事情发生“时，浏览器就会生成事件：
+
+1.在元素上点击
+2.加载页面
+3.改变输入字段
+
+你可以在下一章学习更多有关事件的内容。
+下面两个例子在按钮被点击时改变 <body> 元素的背景色：
+
+实例:
+
+<html>
+<body>
+
+<input type="button" onclick="document.body.style.backgroundColor='lavender';"
+value="Change background color" />
+
+</body>
+</html>
+-->
+<hr/>
+<p>使用事件，在点击元素时调用事件。</p>
+<input type="button" onclick="document.body.style.backgroundColor = 'lavender';" value="改变背景色">
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+在本例中，由函数执行相同的代码：
+
+实例:
+
+<html>
+<body>
+
+<script>
+function ChangeBackground()
+{
+document.body.style.backgroundColor="lavender";
+}
+</script>
+
+<input type="button" onclick="ChangeBackground()"
+value="Change background color" />
+
+</body>
+</html>
+-->
+<hr/>
+<p>用函数执行相同的代码改变背景色。</p>
+<script>
+    function ChangeBackground() {
+        document.body.style.backgroundColor = "orange";
+    }
+</script>
+<input type="button" onclick="ChangeBackground()" value="改变背景色">
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+下面的例子在按钮被点击时改变 <p> 元素的文本：
+
+实例:
+
+<html>
+<body>
+
+<p id="p1">Hello world!</p>
+
+<script>
+function ChangeText()
+{
+document.getElementById("p1").innerHTML="New text!";
+}
+</script>
+
+<input type="button" onclick="ChangeText()" value="Change text">
+
+</body>
+</html>
+-->
+<hr/>
+<p id="p11">Hello world!</p>
+<script>
+    function ChangeText() {
+        document.getElementById("p11").innerHTML = "New text!";
+    }
+</script>
+
+<input type="button" onclick="ChangeText()" value="改变文本">
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+</body>
+</html>
