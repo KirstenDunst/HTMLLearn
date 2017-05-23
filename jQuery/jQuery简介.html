@@ -38,14 +38,14 @@ $(document).ready(function(){
 </script>
 <script>
     $(document).ready(function () {
-        $("p").click(function () {
+        $("p.text1").click(function () {
             $(this).hide();
         });
     });
 </script>
-<p>如果您点击我，我会消失。</p>
-<p>点击我，我也会消失。</p>
-<p>也要点击我哦。</p>
+<p class="text1">如果您点击我，我会消失。</p>
+<p class="text1">点击我，我也会消失。</p>
+<p class="text1">也要点击我哦。</p>
 <br/><br/><br/><br/><br/>
 
 
@@ -125,15 +125,15 @@ $("p").hide();
 <script src="http://www.w3school.com.cn/jquery/jquery.js"></script>
 <script>
     $(document).ready(function () {
-        $("button").click(function () {
-            $("p").hide();
+        $("button.demo2").click(function () {
+            $("p.text2").hide();
         });
     });
 </script>
 <h2>This is a heaing</h2>
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
-<button type="button">Click me</button>
+<p class="text2">This is a paragraph.</p>
+<p class="text2">This is another paragraph.</p>
+<button type="button" class="demo2">Click me</button>
 <br/><br/><br/><br/><br/><br/>
 
 
