@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 事件</title>
+
+    <script src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+    <script >
+        $(document).ready(function () {
+            $("button.demo1").click(function () {
+                $("p.text1").hide();
+            })
+        })
+    </script>
+
+    <script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+    <script>
+        $.noConflict();
+        jQuery(document).ready(function () {
+            jQuery("button.demo2").click(function () {
+                jQuery("p.text2").text("jQuery 仍在运行！");
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+
+<!--jQuery 是为事件处理特别设计的。-->
+
+
+
+
+
+<!--
+jQuery 事件函数
+
+jQuery 事件处理方法是 jQuery 中的核心函数。
+事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。术语由事件“触发”（或“激发”）经常会被使用。
+通常会把 jQuery 代码放到 <head>部分的事件处理方法中：
+
+实例:
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+
+</html>
+-->
+<hr/>
+<h2>This is a heading.</h2>
+<p class="text1">This is a paragraph.</p>
+<p class="text1">This is another paragraph.</p>
+<button type="button" class="demo1">Click me</button>
+<br/><br/><br/><br/><br/><br/>
+<!--
+在上面的例子中，当按钮的点击事件被触发时会调用一个函数：
+
+$("button").click(function() {..some code... } )
+
+该方法隐藏所有 <p> 元素：
+
+$("p").hide();
+-->
+
+
+
+
+
+
+
+<!--
+单独文件中的函数
+
+如果您的网站包含许多页面，并且您希望您的 jQuery 函数易于维护，那么请把您的 jQuery 函数放到独立的 .js 文件中。
+当我们在教程中演示 jQuery 时，会将函数直接添加到 <head> 部分中。不过，把它们放到一个单独的文件中会更好，就像这样（通过 src 属性来引用
+文件）：
+
+实例:
+
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="my_jquery_functions.js"></script>
+</head>
+
+-->
+
+
+
+
+
+
+
+<!--
+jQuery 名称冲突
+
+jQuery 使用 $ 符号作为 jQuery 的简介方式。
+某些其他 JavaScript 库中的函数（比如 Prototype）同样使用 $ 符号。
+jQuery 使用名为 noConflict() 的方法来解决该问题。
+var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号。
+-->
+<hr/>
+<p class="text2">这是一个段落。</p>
+<button class="demo2">测试 jQuery</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+结论:
+
+由于 jQuery 是为处理 HTML 事件而特别设计的，那么当您遵循以下原则时，您的代码会更恰当且更易维护：
+1.把所有 jQuery 代码置于事件处理函数中
+2.把所有事件处理函数置于文档就绪事件处理器中
+3.把 jQuery 代码置于单独的 .js 文件中
+4.如果存在名称冲突，则重命名 jQuery 库
+-->
+
+
+
+
+
+
+
+
+<!--
+jQuery 事件
+
+下面是 jQuery 中事件方法的一些例子：
+
+Event 函数	                                 绑定函数至
+$(document).ready(function)	     将函数绑定到文档的就绪事件（当文档完成加载时）
+$(selector).click(function)	     触发或将函数绑定到被选元素的点击事件
+$(selector).dblclick(function)	 触发或将函数绑定到被选元素的双击事件
+$(selector).focus(function)	     触发或将函数绑定到被选元素的获得焦点事件
+$(selector).mouseover(function)	 触发或将函数绑定到被选元素的鼠标悬停事件
+
+如需完整的参考手册，请访问我们的 jQuery 事件参考手册(http://www.w3school.com.cn/jquery/jquery_ref_events.asp)。
+-->
+
+
+
+
+
+
+
+</body>
+</html>
