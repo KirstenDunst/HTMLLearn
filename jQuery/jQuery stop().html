@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery stop()</title>
+
+    <script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideDown(5000);
+            });
+            $("#stop").click(function () {
+                $("#panel").stop();
+            });
+        });
+    </script>
+    <style>
+        #panel,#flip {
+            padding:5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!--jQuery stop() 方法用于在动画或效果完成前对它们进行停止。-->
+
+
+
+
+
+
+
+
+<!--
+jQuery stop() 方法
+
+jQuery stop() 方法用于停止动画或效果，在它们完成之前。
+stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。
+
+语法:
+
+$(selector).stop(stopAll,goToEnd);
+
+可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。
+可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+因此，默认地，stop() 会清除在被选元素上指定的当前动画。
+下面的例子演示 stop() 方法，不带参数：
+
+实例:
+
+$("#stop").click(function(){
+  $("#panel").stop();
+});
+-->
+
+<!--jQuery stop() 滑动
+演示 jQuery stop() 方法。-->
+<hr/>
+<button id="stop">停止滑动</button>
+<div id="flip">点击这里，向下滑动面板</div>
+<div id="panel">Hello world!</div>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+<!--jQuery stop() 动画（带有参数）
+演示 jQuery stop() 方法。-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#start1").click(function () {
+            $("div.demo1").animate({left:'100px'},5000);
+            $("div.demo1").animate({fontSize:'3em'},5000);
+        });
+        $("#stop1").click(function () {
+            $("div.demo1").stop();
+        });
+        $("#stop21").click(function () {
+            $("div.demo1").stop(true);
+        });
+        $("#stop31").click(function () {
+            $("div.demo1").stop(true,true);
+        });
+    });
+</script>
+<button id="start1">开始</button>
+<button id="stop1">停止</button>
+<button id="stop21">停止所有</button>
+<button id="stop31">停止但要完成</button>
+<p><b>"开始"</b>按钮会启动动画。</p>
+<p><b>"停止"</b>按钮会停止当前活动的动画，但允许以排队的动画向前执行。</p>
+<p><b>"停止所有"</b>按钮停止当前活动的动画，并清空动画队列；因此元素上的所有动画都会停止。</p>
+<p><b>"停止但要完成"</b>会立即完成当前活动的动画，然后停下来。</p>
+
+<div class="demo1" style="background: #98bf21;height: 100px;width: 200px;position: absolute;">HELLO</div>
+<br/><br/><br/><br/><Br/><br/><Br/>
+
+
+
+
+
+
+
+
+<!--jQuery 效果参考手册
+如需全面查阅 jQuery 效果，请访问我们的 jQuery 效果参考手册(http://www.w3school.com.cn/jquery/jquery_ref_effects.asp)。-->
+
+
+
+
+
+</body>
+</html>
