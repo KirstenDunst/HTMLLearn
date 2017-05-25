@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 添加</title>
+</head>
+<body>
+
+<!--通过 jQuery，可以很容易地添加新元素/内容。-->
+
+
+
+<!--
+添加新的 HTML 内容
+
+我们将学习用于添加新内容的四个 jQuery 方法：
+
+1.append() - 在被选元素的结尾插入内容
+2.prepend() - 在被选元素的开头插入内容
+3.after() - 在被选元素之后插入内容
+4.before() - 在被选元素之前插入内容
+-->
+
+
+
+
+
+
+
+
+<!--
+jQuery append() 方法
+
+jQuery append() 方法在被选元素的结尾插入内容。
+
+实例:
+
+$("p").append("Some appended text.");
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("p.demo1").append("<b>Appended text </b>.");
+        });
+        $("#btn2").click(function () {
+            $("ol.demo1").append("<li>Appended item </li>");
+        });
+    });
+</script>
+<p class="demo1">This is a paragraph.</p>
+<p class="demo1">This is another paragraph.</p>
+<ol class="demo1">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ol>
+<button id="btn1">追加文本</button>
+<button id="btn2">追加列表项</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+jQuery prepend() 方法
+
+jQuery prepend() 方法在被选元素的开头插入内容。
+
+实例:
+
+$("p").prepend("Some prepended text.");
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn21").click(function () {
+            $("p.demo2").prepend("<b>Prepended text</b>.");
+        });
+        $("#btn22").click(function () {
+            $("ol.demo2").prepend("<li>Prepended item</li>");
+        });
+    });
+</script>
+<p class="demo2">This is a paragraph.</p>
+<p class="demo2">This is another paragraph.</p>
+<ol class="demo2">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ol>
+<button id="btn21">添加文本</button>
+<button id="btn22">添加列表项</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+通过 append() 和 prepend() 方法添加若干新元素
+
+在上面的例子中，我们只在被选元素的开头/结尾插入文本/HTML。
+
+不过，append() 和 prepend() 方法能够通过参数接收无限数量的新元素。可以通过 jQuery 来生成文本/HTML（就像上面的例子那样），或者通过
+ JavaScript 代码和 DOM 元素。
+在下面的例子中，我们创建若干个新元素。这些元素可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建。然后我们通过 append() 方法把
+这些新元素追加到文本中（对 prepend() 同样有效）：
+
+实例:
+
+function appendText()
+{
+var txt1="<p>Text.</p>";               // 以 HTML 创建新元素
+var txt2=$("<p></p>").text("Text.");   // 以 jQuery 创建新元素
+var txt3=document.createElement("p");  // 以 DOM 创建新元素
+txt3.innerHTML="Text.";
+$("p").append(txt1,txt2,txt3);         // 追加新元素
+}
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    function appendText()
+    {
+        var txt1="<p>Text.</p>";              // 以 HTML 创建新元素
+        var txt2=$("<p></p>").text("Text.");  // 以 jQuery 创建新元素
+        var txt3=document.createElement("p");
+        txt3.innerHTML="Text.";               // 通过 DOM 来创建文本
+        $("body").append(txt1,txt2,txt3);        // 追加新元素
+    }
+</script>
+<p>This is a paragraph.</p>
+<button onclick="appendText()">追加文本</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+jQuery after() 和 before() 方法
+
+jQuery after() 方法在被选元素之后插入内容。
+jQuery before() 方法在被选元素之前插入内容。
+
+实例:
+
+$("img").after("Some text after");
+
+$("img").before("Some text before");
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn31").click(function () {
+            $("img.demo1").before("<b>Before</b>");
+        });
+        $("#btn32").click(function () {
+            $("img.demo1").after("<i>After</i>");
+        });
+    });
+</script>
+<img src="http://www.w3school.com.cn/i/eg_w3school.gif" alt="W3School Logo" class="demo1">
+<br/><br/>
+<button id="btn31">在图片前面添加文本</button>
+<button id="btn32">在图片后面添加文本</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+通过 after() 和 before() 方法添加若干新元素
+
+after() 和 before() 方法能够通过参数接收无限数量的新元素。可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建新元素。
+
+在下面的例子中，我们创建若干新元素。这些元素可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建。然后我们通过 after() 方法把这些
+新元素插到文本中（对 before() 同样有效）：
+
+实例:
+
+function afterText()
+{
+var txt1="<b>I </b>";                    // 以 HTML 创建新元素
+var txt2=$("<i></i>").text("love ");     // 通过 jQuery 创建新元素
+var txt3=document.createElement("big");  // 通过 DOM 创建新元素
+txt3.innerHTML="jQuery!";
+$("img").after(txt1,txt2,txt3);          // 在 img 之后插入新元素
+}
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    function afterText() {
+        var txt1="<b>I </b>";                    // 以 HTML 创建元素
+        var txt2=$("<i></i>").text("love ");     // 通过 jQuery 创建元素
+        var txt3=document.createElement("big");  // 通过 DOM 创建元素
+        txt3.innerHTML="jQuery!";
+        $("img.demo2").after(txt1,txt2,txt3);          // 在 img 之后插入新元素
+    }
+</script>
+<img src="http://www.w3school.com.cn/i/eg_w3school.gif" alt="W3School Logo" class="demo2">
+<br/><br/>
+<button onclick="afterText()">在图片后面添加文本</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+jQuery HTML 参考手册
+如需有关 jQuery HTML 方法的完整内容，请访问以下参考手册：
+
+jQuery 文档操作(http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp)
+jQuery 属性操作(http://www.w3school.com.cn/jquery/jquery_ref_attributes.asp)
+jQuery CSS 操作(http://www.w3school.com.cn/jquery/jquery_ref_css.asp)
+-->
+
+
+
+</body>
+</html>
