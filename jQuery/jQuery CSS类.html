@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery CSS类</title>
+
+    <script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button.demo1").click(function () {
+                $("h1.demo1,h2.demo1,p.demo1").addClass("blue");
+                $("div.demo1").addClass("important");
+            });
+
+            $(document).ready(function () {
+                $("button.demo2").click(function () {
+                    $("#div1").addClass("important blue");
+                });
+            });
+
+            $(document).ready(function () {
+                $("button.demo3").click(function () {
+                    $("h1.blue,h2.blue,p.blue").removeClass("blue");
+                });
+            });
+
+            $(document).ready(function () {
+                $("button.demo4").click(function () {
+                    $("h1.demo4,h2.demo4,p.demo4").toggleClass("blue");
+                });
+            });
+        });
+    </script>
+    <style>
+        .important {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--通过 jQuery，可以很容易地对 CSS 元素进行操作。-->
+
+
+
+
+
+<!--
+jQuery 操作 CSS
+
+jQuery 拥有若干进行 CSS 操作的方法。我们将学习下面这些：
+
+1.addClass() - 向被选元素添加一个或多个类
+2.removeClass() - 从被选元素删除一个或多个类
+3.toggleClass() - 对被选元素进行添加/删除类的切换操作
+4.css() - 设置或返回样式属性
+-->
+
+
+
+
+
+
+
+<!--
+实例样式表
+
+下面的样式表将用于本页的所有例子：
+
+.important
+{
+font-weight:bold;
+font-size:xx-large;
+}
+
+.blue
+{
+color:blue;
+}
+-->
+
+
+
+
+
+
+
+
+
+<!--
+jQuery addClass() 方法
+
+下面的例子展示如何向不同的元素添加 class 属性。当然，在添加类时，您也可以选取多个元素：
+
+实例:
+
+$("button").click(function(){
+  $("h1,h2,p").addClass("blue");
+  $("div").addClass("important");
+});
+-->
+<hr/>
+<h1 class="demo1">标题 1 </h1>
+<h2 class="demo1">标题 2</h2>
+<p class="demo1">这是一个段落。</p>
+<p class="demo1">这是另外一个段落。</p>
+<div class="demo1">这是非常重要的文本！</div>
+<br/>
+<button class="demo1">向元素添加类</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+您也可以在 addClass() 方法中规定多个类：
+
+实例:
+
+$("button").click(function(){
+  $("#div1").addClass("important blue");
+});
+-->
+<hr/>
+<div id="div1">这是一些文本。</div>
+<div id="div2">这是一些文本。</div>
+<br>
+<button class="demo2">向第一个 div 元素添加类</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+jQuery removeClass() 方法
+
+下面的例子演示如何不同的元素中删除指定的 class 属性：
+
+实例:
+
+$("button").click(function(){
+  $("h1,h2,p").removeClass("blue");
+});
+-->
+<hr/>
+<h1 class="blue">标题 1 </h1>
+<h2 class="blue">标题 2</h2>
+<p class="blue">这是一个段落。</p>
+<p>这是另一个段落。</p>
+<br/>
+<button class="demo3">从元素上删除类</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+jQuery toggleClass() 方法
+
+下面的例子将展示如何使用 jQuery toggleClass() 方法。该方法对被选元素进行添加/删除类的切换操作：
+
+实例:
+
+$("button").click(function(){
+  $("h1,h2,p").toggleClass("blue");
+});
+-->
+ <hr/>
+<h1 class="demo4">标题 1</h1>
+<h2 class="demo4">标题 2</h2>
+<p class="demo4">这是一个段落。</p>
+<p class="demo4">这是另外一个段落。</p>
+<button class="demo4" type="button">切换 CSS 类。</button>
+<br/><br/><Br/><Br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+jQuery css() 方法
+我们将在下一章讲解 jQuery css() 方法。
+-->
+
+
+<!--
+jQuery HTML 参考手册
+如需有关 jQuery CSS 方法的完整内容，请访问我们的
+ jQuery CSS 操作参考手册(http://www.w3school.com.cn/jquery/jquery_ref_css.asp)
+ -->
+</body>
+</html>
