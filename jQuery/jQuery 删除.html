@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 删除</title>
+</head>
+<body>
+
+<!--通过 jQuery，可以很容易地删除已有的 HTML 元素。-->
+
+
+
+
+<!--
+删除元素/内容
+
+如需删除元素和内容，一般可使用以下两个 jQuery 方法：
+
+1.remove() - 删除被选元素（及其子元素）
+2.empty() - 从被选元素中删除子元素
+-->
+
+
+
+
+
+
+
+
+<!--
+jQuery remove() 方法
+
+jQuery remove() 方法删除被选元素及其子元素。
+
+实例:
+
+$("#div1").remove();
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button.demo1").click(function () {
+            $("#div1").remove();
+        });
+    });
+</script>
+<div id="div1" style="height: 100px;width: 300px;border: 1px solid black;background-color: yellow;">
+    This is some text in the div.
+    <p>This is a paragraph in the div.</p>
+    <p>This is another paragraph in the div.</p>
+</div>
+<br/>
+<button class="demo1">删除 div 元素</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+jQuery empty() 方法
+
+jQuery empty() 方法删除被选元素的子元素。
+
+实例:
+
+$("#div1").empty();
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button.demo2").click(function () {
+            $("#div2").empty();
+        });
+    });
+</script>
+<div id="div2" style="height: 100px;width: 300px;border: 1px solid black;background-color: yellow;">
+    This is some text in the div.
+    <p>This is a paragraph in the div.</p>
+    <p>This is another paragraph in the div.</p>
+</div>
+<br/>
+<button class="demo2">清空 div 元素</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+过滤被删除的元素
+
+jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。
+该参数可以是任何 jQuery 选择器的语法。
+下面的例子删除 class="italic" 的所有 <p> 元素：
+
+实例:
+
+$("p").remove(".italic");
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button.demo3").click(function () {
+            $("p").remove(".italic");
+        });
+    });
+</script>
+<p>This is a paragraph in the div.</p>
+<p class="italic"><i>This is another paragraph in the div.</i></p>
+<p class="italic"><i>This is another paragraph in the div.</i></p>
+<button class="demo3">删除 class="italic"的所有 p 元素</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+jQuery HTML 参考手册
+如需有关 jQuery HTML 方法的完整内容，请访问以下参考手册：
+jQuery 文档操作(http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp)
+jQuery 属性操作(http://www.w3school.com.cn/jquery/jquery_ref_attributes.asp)
+jQuery CSS 操作(http://www.w3school.com.cn/jquery/jquery_ref_css.asp)
+-->
+
+</body>
+</html>
