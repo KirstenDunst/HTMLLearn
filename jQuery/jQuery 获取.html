@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 获取</title>
+</head>
+<body>
+
+<!--jQuery 拥有可操作 HTML 元素和属性的强大方法。-->
+
+
+
+
+<!--
+jQuery DOM 操作
+
+jQuery 中非常重要的部分，就是操作 DOM 的能力。
+jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。
+提示：DOM = Document Object Model（文档对象模型）
+DOM 定义访问 HTML 和 XML 文档的标准：
+“W3C 文档对象模型独立于平台和语言的界面，允许程序和脚本动态访问和更新文档的内容、结构以及样式。”
+-->
+
+
+
+
+
+
+
+
+
+<!--
+获得内容 - text()、html() 以及 val()
+
+三个简单实用的用于 DOM 操作的 jQuery 方法：
+
+1.text() - 设置或返回所选元素的文本内容
+2.html() - 设置或返回所选元素的内容（包括 HTML 标记）
+3.val() - 设置或返回表单字段的值
+
+下面的例子演示如何通过 jQuery text() 和 html() 方法来获得内容：
+
+实例:
+
+$("#btn1").click(function(){
+  alert("Text: " + $("#test").text());
+});
+$("#btn2").click(function(){
+  alert("HTML: " + $("#test").html());
+});
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            alert("Text:" + $("#test").text());
+        });
+        $("#btn2").click(function () {
+            alert("HTML:" + $("#test").html());
+        });
+    });
+</script>
+<p id="test">这是段落中的<b>粗体</b>文本。</p>
+<button id="btn1">显示文本</button>
+<button id="btn2">显示 HTML</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+下面的例子演示如何通过 jQuery val() 方法获得输入字段的值：
+
+实例:
+
+$("#btn1").click(function(){
+  alert("Value: " + $("#test").val());
+});
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button.demo1").click(function () {
+            alert("Value:" + $("#test1").val());
+        });
+    });
+</script>
+<p>姓名：<input type="text" id="test1" value="米老鼠"></p>
+<button class="demo1">显示值</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+获取属性 - attr()
+
+jQuery attr() 方法用于获取属性值。
+下面的例子演示如何获得链接中 href 属性的值：
+
+实例:
+
+$("button").click(function(){
+  alert($("#w3s").attr("href"));
+});
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button.demo2").click(function () {
+            alert($("#w3s").attr("href"));
+        });
+    });
+</script>
+<p><a href="http://www.w3school.com.cn" id="w3s">W3School.com.cn</a></p>
+<button class="demo2">显示 href 值</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+jQuery HTML 参考手册
+如需有关 jQuery HTML 方法的完整内容，请访问以下参考手册：
+jQuery 文档操作(http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp)
+jQuery 属性操作(http://www.w3school.com.cn/jquery/jquery_ref_attributes.asp)
+jQuery CSS 操作(http://www.w3school.com.cn/jquery/jquery_ref_css.asp)
+-->
+
+</body>
+</html>
