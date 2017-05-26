@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 同胞</title>
+
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("h2.demo1").siblings().css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+
+</head>
+<body>
+
+<!--同胞拥有相同的父元素。
+通过 jQuery，您能够在 DOM 树中遍历元素的同胞元素。-->
+
+
+
+
+
+
+
+
+<!--
+在 DOM 树中水平遍历
+
+有许多有用的方法让我们在 DOM 树进行水平遍历：
+
+1.siblings()
+2.next()
+3.nextAll()
+4.nextUntil()
+5.prev()
+6.prevAll()
+7.prevUntil()
+-->
+
+
+
+
+
+
+
+
+<!--
+jQuery siblings() 方法
+
+siblings() 方法返回被选元素的所有同胞元素。
+下面的例子返回 <h2> 的所有同胞元素：
+
+实例:
+
+$(document).ready(function(){
+  $("h2").siblings();
+});
+-->
+<hr/>
+<div class="siblings">div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2 class="demo1">h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+</div>
+<br/><br/><br/><br/><Br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+您也可以使用可选参数来过滤对同胞元素的搜索。
+下面的例子返回属于 <h2> 的同胞元素的所有 <p> 元素：
+
+实例:
+
+$(document).ready(function(){
+  $("h2").siblings("p");
+});
+-->
+<hr/>
+<script>
+    $(document).ready(function(){
+        $("h2.demo2").siblings("p").css({"color":"red","border":"2px solid red"});
+    });
+</script>
+<div class="siblings">div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2 class="demo2">h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+</div>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+jQuery next() 方法
+
+next() 方法返回被选元素的下一个同胞元素。
+该方法只返回一个元素。
+下面的例子返回 <h2> 的下一个同胞元素：
+
+实例:
+
+$(document).ready(function(){
+  $("h2").next();
+});
+-->
+<hr/>
+<script>
+    $(document).ready(function(){
+        $("h2.demo3").next().css({"color":"red","border":"2px solid red"});
+    });
+</script>
+<div class="siblings">div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2 class="demo3">h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+</div>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+jQuery nextAll() 方法
+
+nextAll() 方法返回被选元素的所有跟随的同胞元素。
+下面的例子返回 <h2> 的所有跟随的同胞元素：
+
+实例:
+
+$(document).ready(function(){
+  $("h2").nextAll();
+});
+-->
+<hr/>
+<script>
+    $(document).ready(function(){
+        $("h2.demo4").nextAll().css({"color":"red","border":"2px solid red"});
+    });
+</script>
+<div class="siblings">div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2 class="demo4">h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+</div>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+jQuery nextUntil() 方法
+
+nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。
+下面的例子返回介于 <h2> 与 <h6> 元素之间的所有同胞元素(不包括这两个元素)：
+
+实例:
+
+$(document).ready(function(){
+  $("h2").nextUntil("h6");
+});
+-->
+<hr/>
+<script>
+    $(document).ready(function(){
+        $("h2").nextUntil("h6").css({"color":"red","border":"2px solid red"});
+    });
+</script>
+<div class="siblings">div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2 class="demo5">h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6 class="demo5">h6</h6>
+    <p>p</p>
+</div>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+jQuery prev(), prevAll() & prevUntil() 方法
+prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着
+同胞元素向后遍历，而不是向前）。
+-->
+
+
+<!--jQuery 遍历参考手册
+如需了解所有的 jQuery 遍历方法，请访问我们的 jQuery 遍历参考手册(http://www.w3school.com.cn/jquery/jquery_ref_traversing.asp)。-->
+
+</body>
+</html>
