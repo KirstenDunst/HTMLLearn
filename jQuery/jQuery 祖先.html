@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 祖先</title>
+
+    <style>
+        .ancestors *{
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding:5px;
+            margin:15px;
+        }
+    </style>
+
+</head>
+<body class="ancestors">body (曾曾祖父)
+
+
+
+<!--祖先是父、祖父或曾祖父等等。
+通过 jQuery，您能够向上遍历 DOM 树，以查找元素的祖先。-->
+
+
+
+
+
+
+<!--
+向上遍历 DOM 树
+这些 jQuery 方法很有用，它们用于向上遍历 DOM 树：
+
+1.parent()
+2.parents()
+3.parentsUntil()
+-->
+
+
+
+
+
+
+<!--
+jQuery parent() 方法
+parent() 方法返回被选元素的直接父元素。
+该方法只会向上一级对 DOM 树进行遍历。
+下面的例子返回每个 <span> 元素的的直接父元素：
+实例
+$(document).ready(function(){
+  $("span").parent();
+});
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("span").parent().css({"color":"red","border":"2px solid red"});
+    });
+</script>
+<div class="ancestors">
+    <div style="width: 500px;">div （曾祖父）
+        <ul>ul (祖父)
+            <li>li (直接父)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+    <div style="width: 500px;">div (祖父)
+        <p>p (直接父)
+            <span>span</span>
+        </p>
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+jQuery parents() 方法
+
+parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<html>)。
+下面的例子返回所有 <span> 元素的所有祖先：
+
+实例:
+
+$(document).ready(function(){
+  $("span").parents();
+});
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("span").parents().css({"color":"red","border":"2px solid red"});
+    });
+</script>
+<div style="width: 500px;">div (曾祖父)
+    <ul>ul(祖父)
+        <li>li (直接父)
+            <span>span</span>
+        </li>
+    </ul>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+您也可以使用可选参数来过滤对祖先元素的搜索。
+下面的例子返回所有 <span> 元素的所有祖先，并且它是 <ul> 元素：
+
+实例:
+
+$(document).ready(function(){
+  $("span").parents("ul");
+});
+-->
+
+<!--
+<head>
+<style>
+.ancestors *
+{
+display: block;
+border: 2px solid lightgrey;
+color: lightgrey;
+padding: 5px;
+margin: 15px;
+}
+</style>
+<script src="/jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("span").parents("ul").css({"color":"red","border":"2px solid red"});
+});
+</script>
+</head>
+
+<body class="ancestors">body (曾曾祖父)
+  <div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)
+      <li>li (直接父)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+</body>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+jQuery parentsUntil() 方法
+
+parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。
+下面的例子返回介于 <span> 与 <div> 元素之间的所有祖先元素：
+
+实例:
+
+$(document).ready(function(){
+  $("span").parentsUntil("div");
+});
+-->
+
+<!--
+<head>
+<style>
+.ancestors *
+{
+display: block;
+border: 2px solid lightgrey;
+color: lightgrey;
+padding: 5px;
+margin: 15px;
+}
+</style>
+<script src="/jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("span").parentsUntil("div").css({"color":"red","border":"2px solid red"});
+});
+</script>
+</head>
+
+<body class="ancestors"> body (曾曾祖父)
+  <div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)
+      <li>li (直接父)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+</body>
+-->
+
+
+
+
+
+
+
+
+
+<!--jQuery 遍历参考手册
+如需了解所有的 jQuery 遍历方法，请访问我们的 jQuery 遍历参考手册(http://www.w3school.com.cn/jquery/jquery_ref_traversing.asp)。
+-->
+
+
+</body>
+<!-- 最外围的红色边框，在 body 元素之前，是 html 元素（也是祖先）。 -->
+</html>
