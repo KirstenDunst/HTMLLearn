@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery css()</title>
+</head>
+<body>
+
+
+<!--jQuery css() 方法
+css() 方法设置或返回被选元素的一个或多个样式属性。-->
+
+
+
+
+
+
+
+
+
+<!--
+返回 CSS 属性
+
+如需返回指定的 CSS 属性的值，请使用如下语法：
+
+css("propertyname");
+
+下面的例子将返回首个匹配元素的 background-color 值：
+
+实例:
+
+$("p").css("background-color");
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button.demo1").click(function () {
+            alert("Background color = " + $("p").css("background-color"));
+        });
+    });
+</script>
+<h2>这是标题</h2>
+<p style="background-color: #00ff00">这是一个段落。</p>
+<p style="background-color: #ff0000">这是一个段落。</p>
+<p style="background-color: #0000ff">这是一个段落。</p>
+<button class="demo1">返回 p 元素的背景色(读取的是第一个p元素的背景色)</button>
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+<!--
+设置 CSS 属性
+
+如需设置指定的 CSS 属性，请使用如下语法：
+
+css("propertyname","value");
+
+下面的例子将为所有匹配元素设置 background-color 值：
+
+实例:
+
+$("p").css("background-color","yellow");
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button.demo2").click(function () {
+            $("p.demo2").css("background-color","yellow");
+        });
+    });
+</script>
+<h2>这是标题</h2>
+<p style="background-color: #ff0000" class="demo2">这是一个段落。</p>
+<p style="background-color: #00ff00" class="demo2">这是一个段落。</p>
+<p style="background-color: #0000ff" class="demo2">这是一个段落。</p>
+<p class="demo2">这是一个段落。</p>
+<button class="demo2">设置 p 元素的背景颜色</button>
+<br/><br/><Br/><Br/><br/><Br/>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+设置多个 CSS 属性
+
+如需设置多个 CSS 属性，请使用如下语法：
+
+css({"propertyname":"value","propertyname":"value",...});
+
+下面的例子将为所有匹配元素设置 background-color 和 font-size：
+
+实例:
+
+$("p").css({"background-color":"yellow","font-size":"200%"});
+-->
+<hr/>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button.demo3").click(function(){
+            $("p.demo3").css({"background-color":"yellow","font-size":"200%"});
+        });
+    });
+</script>
+<h2>这是标题</h2>
+<p style="background-color:#ff0000" class="demo3">这是一个段落。</p>
+<p style="background-color:#00ff00" class="demo3">这是一个段落。</p>
+<p style="background-color:#0000ff" class="demo3">这是一个段落。</p>
+<p class="demo3">这是一个段落。</p>
+<button class="demo3">为 p 元素设置多个样式</button>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+<!--jQuery HTML 参考手册
+如需有关 jQuery CSS 方法的完整内容，请访问我们的
+ jQuery CSS 操作参考手册(http://www.w3school.com.cn/jquery/jquery_ref_css.asp)-->
+
+
+</body>
+</html>
