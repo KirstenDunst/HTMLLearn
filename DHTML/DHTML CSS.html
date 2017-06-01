@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DHTML CSS</title>
+
+    <style>
+        h1.ex1 {
+            position:relative;
+            left:20px;
+        }
+        h1.ex2 {
+            position:relative;
+            left:-20px;
+        }
+
+        h1.text1 {
+             position:relative;
+             left:40px;
+        }
+
+        h1.x {
+            position:absolute;
+            left:100px;
+            top:150px;
+        }
+
+        h1.one {
+            visibility:visible;
+        }
+        h1.two {
+            visibility: hidden;
+        }
+
+        img.x
+        {
+            position:absolute;
+            left:0px;
+            top:0px;
+            z-index:-1;
+        }
+
+        img.x1 {
+            position:absolute;
+            left:0px;
+            top:0px;
+            z-index:1;
+        }
+
+        h2.text2 {
+            width:100%;
+        }
+
+        div.text3 {
+            width:160px;
+            height:120px;
+        }
+
+        body
+        {
+            background-attachment: fixed;
+            background-image: url("http://www.w3school.com.cn/i/eg_bulboff.gif");
+            background-repeat: no-repeat;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--CSS 用于为 HTML 元素添加样式。-->
+
+
+
+
+
+
+<!--实例
+注释：大多数 DHTML 实例需要IE 4.0+、Netscape 7+ 或者 Opera 7+！
+-->
+
+
+
+
+
+
+<!--
+position:relative
+如何相对于元素的正常位置来定位这个元素。
+-->
+<hr/>
+<h1>Normal Heading</h1>
+<h1 class="ex1">Heading +20</h1>
+<h1 class="ex2">Heading -20</h1>
+
+<p>相对定位相对于元素的正常位置对其进行移动。</p>
+<p>"left:20" 给元素的 LEFT 位置增加 20 像素。</p>
+<p>"left:-20" 从元素的 LEFT 位置减去 20 像素。</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+position:relative
+如何相对其正常位置来定位所有的标题。
+-->
+<hr/>
+<h1 class="text1">标题 A</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+<h1 class="text1">标题 B</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+<h1 class="text1">标题 C</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+<h1 class="text1">标题 D</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+position:absolute
+如何使用一个绝对值来定义一个元素。
+-->
+<hr/>
+<h1 class="x">这是一个标题</h1>
+<p>通过绝对定位，可以把元素放置页面的任何位置。</p>
+<p>这个标题的 LEFT 位置距离页面左侧 100 像素。TOP 位置距离页面顶端 150 个像素。</p>
+<br/><br/><br/><br/><Br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+哪些属性可与 CSS-P 一同使用？
+
+首先，此元素必须指定 position 属性（relative 或 absolute）。
+然后，我就可以设置下列 CSS-P 属性了：
+
+1.left - 元素的左侧位置
+2.top - 元素的顶端位置
+3.visibility - 指定元素应当可见还是隐藏
+4.z-index - 元素的堆叠次序
+5.clip - 元素裁剪
+6.overflow - 如何处理溢出的内容
+
+-->
+
+
+
+
+
+
+
+
+
+<!--
+Position
+
+CSS 的 position 属性允许您控制文档中某个元素的定位。
+
+position:relative
+position:relative 属性可向对于一个元素的当前位置来定位此元素。
+下面的例子把这个 div 元素定位到距离其正常位置右方 10 像素的位置：
+
+div
+{
+position:relative;
+left:10;
+}
+
+position:absolute
+position:absolute 属性根据距离窗口的 margin 来定位一个元素。
+下面的例子把这个 div 元素定位到距离其包含块左侧 margin 的右方 10 像素的位置：
+
+div
+{
+position:absolute;
+left:10;
+}
+-->
+
+
+
+
+
+
+
+
+
+<!--
+Visibility
+
+visibility 属性可决定一个元素是否可见。
+
+visibility:visible
+visibility:visible 属性可使元素可见。
+
+
+h1
+{
+visibility:visible;
+}
+
+visibility:hidden
+visibility:hidden 属性可使元素不可见。
+
+
+h1
+{
+visibility:hidden;
+}
+-->
+
+
+
+
+
+
+
+
+
+<!--
+Z-index
+
+z-index 属性用于把一个元素放置于另一个元素之后。z-index 的默认值是 0。值越高，其优先权也越高。z-index: -1 更低的优先权。
+
+h1
+{
+z-index:1;
+}
+
+h2
+{
+z-index:2;
+}
+
+在上面的例子中，如果 h1 和 h2 彼此叠加，则 h2 元素会位于 h1 的上面。
+-->
+
+
+
+
+
+
+
+
+
+<!--
+Filters
+
+filter 属性允许您向文本和图像添加更多的样式效果。
+
+h1
+{
+width:100%;
+filter:glow;
+}
+
+注释：若需要使用 filter 属性，请始终指定元素的宽度。
+上面的例子产生下面的输出：
+
+Header
+
+不同的滤镜
+注释：除非 background-color 属性被设置为 transparent，否则某些 Filter 属性将无法工作！
+-->
+<img src="DHTML%20CSS1.png">
+
+
+
+
+
+
+
+
+<!--
+Background
+background 属性允许您选用自己的背景。
+background-attachment:scroll
+背景随页面滚动。
+background-attachment:fixed
+背景不会随页面滚动。
+-->
+
+
+
+
+
+
+
+
+<!--更多实例-->
+<!--
+Visibility
+如何使某个元素不可见。你希望此元素显示还是不显示？
+-->
+<hr/>
+<h1 class="one">标题 一</h1>
+<h1 class="two">标题 二</h1>
+<p>标题二在哪儿？</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+Z-index
+Z-index 可用于把一个元素放置于另一个元素之后，通过使用 Z-index 次序。
+-->
+<hr/>
+<h1>这是一个标题</h1>
+<img class="x" src="http://www.w3school.com.cn/i/eg_bulbon.gif" />
+<p>默认 z-index 是 0。Z-index -1 有更低的优先级。</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+Z-index
+请看一下，元素的 Z-index 次序已经改变了。
+-->
+<hr/>
+<h1>这是一个标题</h1>
+<img class="x1" src="http://www.w3school.com.cn/i/eg_bulbon.gif" />
+<p>默认 z-index 是 0。Z-index 1 有更高的优先级。</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+Cursors
+通过 CSS 来改变鼠标指针的样式。
+-->
+<hr/>
+<p>请把鼠标移动到单词上，这样会看到鼠标指针的变化：</p>
+<span style="cursor: auto">Auto</span><br />
+<span style="cursor: crosshair">Crosshair</span><br />
+<span style="cursor: default">Default</span><br />
+<span style="cursor: pointer">Pointer</span><br />
+<span style="cursor: hand">Hand</span><br />
+<span style="cursor: move">Move</span><br />
+<span style="cursor: e-resize">e-resize</span><br />
+<span style="cursor: ne-resize">ne-resize</span><br />
+<span style="cursor: nw-resize">nw-resize</span><br />
+<span style="cursor: n-resize">n-resize</span><br />
+<span style="cursor: se-resize">se-resize</span><br />
+<span style="cursor: sw-resize">sw-resize</span><br />
+<span style="cursor: s-resize">s-resize</span><br />
+<span style="cursor: w-resize">w-resize</span><br />
+<span style="cursor: text">text</span><br />
+<span style="cursor: wait">wait</span><br />
+<span style="cursor: help">help</span><br />
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+Filters
+使用 filter 属性来改变标题的样式。
+-->
+<hr/>
+<h2 class="text2" style="filter:glow()">发光</h2>
+<h2 class="text2" style="filter:blur()">模糊</h2>
+<h2 class="text2" style="filter:fliph()">Flip H</h2>
+<h2 class="text2" style="filter:flipv()">Flip V</h2>
+<h2 class="text2" style="filter:shadow()">阴影</h2>
+<h2 class="text2" style="filter:dropshadow()">阴影</h2>
+<h2 class="text2" style="filter:wave(Strength=2)">波浪</h2>
+<p>注释：如果元素的 width 属性没有设置，那么滤镜不会起作用。</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+Filters on Images
+filter 属性也可以应用于图像，这里有一些已应用了 filter 属性的图像例子。
+-->
+<hr/>
+Alpha:
+<div class="text3" style="filter:alpha(Opacity=20)">
+    <img src="http://www.w3school.com.cn/i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Gray:
+<div class="text3" style="filter:gray()">
+    <img src="http://www.w3school.com.cn/i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Invert:
+<div class="text3" style="filter:invert()">
+    <img src="http://www.w3school.com.cn/i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Xray:
+<div class="text3" style="filter:xray()">
+    <img src="http://www.w3school.com.cn/i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Mask:
+<div class="text3" style="position:absolute;left:10px;top:610px;">
+    <img src="http://www.w3school.com.cn/i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+<div class="text3" style="position:absolute; left: 10px; top: 610px; filter: mask(color=#ffffff); width: 160px; height: 120px;">
+    <h2>The mask value makes the text transparent</h2>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+Watermark
+当页面滚动时不会移动的背景图片。
+-->
+<hr/>
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+</body>
+</html>
