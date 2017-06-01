@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DHTML DOM</title>
+</head>
+<body>
+
+<!--DHTML DOM（Document Object Model）-->
+
+
+<!--DOM （文档对象模型）是我们有能力访问一个文档中的每个元素。-->
+
+
+
+
+
+
+<!--
+实例
+注释：大多数 DHTML 实例需要IE 4.0+、Netscape 7+ 或者 Opera 7+！
+
+
+
+元素访问
+如何访问一个元素并改变它的样式。
+-->
+<hr/>
+<h1 id="header">我的标题</h1>
+
+<script type="text/javascript">
+    document.getElementById('header').style.color="red"
+</script>
+<p><b>注释：</b>是脚本改变了该元素的样式！</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+<!--
+属性改变
+如何访问一个图像元素并修改 "src" 属性。
+-->
+<hr/>
+<img id="image" src="http://www.w3school.com.cn/i/eg_smile.gif" />
+
+<script type="text/javascript">
+    document.getElementById('image').src="http://www.w3school.com.cn/i/eg_landscape.jpg"
+</script>
+<p><b>注释：</b>原始图片是一个笑脸，但是上面的脚本把图片改为风景。</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+innerHTML
+如何访问并修改一个元素的内容。
+-->
+<hr/>
+<h1 id="header1">旧标题</h1>
+<script type="text/javascript">
+    document.getElementById('header1').innerHTML="新标题"
+</script>
+<p>请注意，原始的文本是“旧标题”。</p>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+如何访问一个元素？
+
+元素必须拥有被定义的 id 属性，且需要一段脚本语言。JavaScript 是浏览器兼容性最好的脚本语言，所以我们使用 JavaScript。
+
+<html>
+<body>
+
+<h1 id="header">My header</h1>
+
+<script type="text/javascript">
+document.getElementById('header').style.color="red"
+</script>
+
+</body>
+</html>
+
+这段脚本可改变标题元素的颜色，并生成输出。
+
+My header
+-->
+
+
+
+
+
+</body>
+</html>
