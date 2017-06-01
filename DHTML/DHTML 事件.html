@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DHTML 事件</title>
+
+    <script type="text/javascript">
+        function mymessage()
+        {
+            alert("该消息被 onload 事件触发")
+        }
+    </script>
+
+</head>
+<body onload="mymessage()">
+
+<!--DHTML 事件句柄（Event Handlers）-->
+
+<!--您可以在某个事件发生时通过一个事件句柄对某个元素进行某种操作。-->
+
+
+
+
+
+
+<!--
+实例
+注释：大多数 DHTML 实例需要IE 4.0+、Netscape 7+ 或者 Opera 7+！
+
+onmouseover 和 onmouseout
+如何在鼠标指针移到并移开一个元素时改变一个元素的颜色。
+-->
+<hr/>
+<h1 onmouseover="style.color='red'"
+    onmouseout="style.color='black'">
+    请把鼠标移动到文本上
+</h1>
+<br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+onclick
+把灯点亮。如何当您单击一副图像时改变图像，然后再次单击它时换回原来的图像。
+-->
+<hr/>
+<script type="text/javascript">
+    cc=0;
+    function changeimage()
+    {
+        if (cc==0)
+        {
+            cc=1;
+            document.getElementById('myimage').src="http://www.w3school.com.cn/i/eg_bulbon.gif"
+        }
+        else
+        {
+            cc=0;
+            document.getElementById('myimage').src="http://www.w3school.com.cn/i/eg_bulboff.gif"
+        }
+    }
+</script>
+<img id="myimage" onclick="changeimage()"
+     border="0" src="http://www.w3school.com.cn/i/eg_bulboff.gif"
+     width="100" height="180" />
+<p>请点击这个灯泡，把它点亮吧！</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+<!--
+onmousedown 和 onmouseup
+这次只有当你按住鼠标按钮时灯才会亮。
+-->
+<hr/>
+<script type="text/javascript">
+    function lighton()
+    {
+        document.getElementById('myimage1').src="http://www.w3school.com.cn/i/eg_bulbon.gif"
+    }
+    function lightoff()
+    {
+        document.getElementById('myimage1').src="http://www.w3school.com.cn/i/eg_bulboff.gif"
+    }
+</script>
+<img id="myimage1" onmousedown="lighton()"
+     onmouseup="lightoff()"
+     src="http://www.w3school.com.cn/i/eg_bulboff.gif" width="100"
+     height="180">
+<p>请点击灯泡，把它点亮！</p>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+<!--
+onload
+当页面完成加载时显示一个提示框。
+-->
+<!--
+<html>
+<head>
+
+<script type="text/javascript">
+function mymessage()
+{
+alert("该消息被 onload 事件触发")
+}
+</script>
+</head>
+
+<body onload="mymessage()">
+</body>
+
+</html>
+-->
+
+
+
+
+
+
+
+
+<!--
+事件句柄
+通过一个事件句柄，您可以在某个事件发生时对某个元素进行某种操作：当用户点击元素时，当页面加载时，当一个表单被提交时，等等。
+<h1 onclick="style.color='red'">Click on this text</h1>
+上面的例子可定义当用户点击一个标题时标题变为红色。
+您也可以在页面的 head 部分添加一段脚本，然后从事件句柄调用函数：
+<html>
+
+<head>
+<script type="text/javascript">
+function changecolor()
+{
+document.getElementById('header').style.color="red"
+}
+</script>
+</head>
+
+<body>
+<h1 id="header" onclick="changecolor()">Click on this text</h1>
+</body>
+
+</html>
+-->
+
+
+
+
+
+
+
+<!---->
+<hr/>
+<p>HTML 4.0 事件句柄</p>
+<img src="事件句柄1.png">
+<br/><br/><br/><br/><br/><br/>
+
+
+
+</body>
+</html>
